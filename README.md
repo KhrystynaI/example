@@ -1,24 +1,4 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+At the first step the application is similar to a newspaper site, where users can view articles and comment on them.
+Only registered authors can post, edit and delete articles.
+Authors can see the statistics of comments and the number of publications, sort the articles by dates and sections,
+set the time of publication for the article.
