@@ -1,0 +1,3 @@
+<h1>hello<h1>
+<%= @autor.articles.count%>
+<%= @autor.articles.map {|article| article.comments.count}%>
