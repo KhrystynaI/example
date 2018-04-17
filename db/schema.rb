@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20180410135546) do
     t.string "title"
     t.text "body"
     t.boolean "published", default: false
+    t.datetime "published_at"
     t.integer "autor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

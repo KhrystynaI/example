@@ -1,7 +1,8 @@
 class AutorsController < ApplicationController
   before_action :authenticate_autor!
-  def example
+  def for_autor
     @autor = current_autor
-    render '/autors/index'
+    @articles = @autor.articles.all
+    render '/autors/for_autor'
   end
 end

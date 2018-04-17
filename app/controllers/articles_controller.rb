@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_autor!, except: [:index, :show]
   before_action :authenticate_user!, only: [:show]
   def index
-    @articles = Article.all
+    @articles = Article.when_published
   end
 
   def show
@@ -18,15 +18,13 @@ class ArticlesController < ApplicationController
     @autor = current_autor
     @article = @autor.articles.create(article_params)
     if @article.save
-      redirect_to articles_path
+      redirect_to autors_for_autor_path
     end
   end
 
   def edit
     @article = Article.find(params[:id])
   end
-
-
 
   def update
     @article = Article.find(params[:id])
@@ -46,7 +44,7 @@ class ArticlesController < ApplicationController
   end
 
   private
-    def article_params
-      params.require(:article).permit(:title, :body)
-    end
+  def article_params
+    params.require(:article).permit(:title, :body, :published_at, :published)
+  end
 end

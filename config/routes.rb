@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :autors, path: 'autors', controllers: { sessions: "autors/sessions" }
   devise_for :users, path: 'users', controllers: { sessions: "users/sessions" }
   get 'welcome/index'
-  get 'autors/example'
+  get 'autors/for_autor'
   root 'welcome#index'
   resources :articles do
   resources :comments
