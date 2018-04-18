@@ -31,6 +31,7 @@ gem 'devise', '~> 4.3'
 gem 'activeadmin', '~> 1.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'whenever', :require => false
 gem 'rubocop', require: false
 gem 'rubocop-rspec', require: false
 # Use Capistrano for deployment

@@ -4,7 +4,7 @@ namespace :articles do
     Article.all.each do |article|
       if article.created_at <= Time.now
         article.published = true
-        article.updated_at = Time.now
+        article.update_attributes(:updated_at => Time.now)
       end
       if article.published == true
         puts article.title

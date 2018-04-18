@@ -16,7 +16,7 @@ scope :when_published, proc {
   end
 
   def check_status
-    if self.created_at <= Time.now
+      if self.created_at <= Time.now
       self.published = true
     end
   end
