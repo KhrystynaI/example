@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :autor
+  belongs_to :category
   has_many :comments, dependent: :destroy
-  validates :title, presence: true
   before_save :check_published
   before_save :check_status
 
@@ -9,6 +9,7 @@ class Article < ApplicationRecord
 scope :when_published, proc {
   where(:published => true)
 }
+
   private
 
   def check_published

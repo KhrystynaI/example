@@ -5,4 +5,5 @@ class AutorsController < ApplicationController
     @articles = @autor.articles.all
     render '/autors/for_autor'
   end
+
 end

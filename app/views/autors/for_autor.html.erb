@@ -15,7 +15,7 @@
     <td><%= article.body %></td>
     <td><%= article.published %></td>
     <td><%= article.published_at %></td>
-    <td><%= article.comments.map{|coment| comment.body}%></td>
+    <td><%= article.comments.map{|comment| comment.body}%></td>
   </tr>
 <% end %>
 </table>
@@ -23,5 +23,9 @@
 
 <%= @autor.articles.count%>
 <%= @autor.articles.map {|article| article.comments.count}%>
+<%= @autor.articles.map {|article| article.category.name}%>
+<%= "salary"%>
+<%= ((@autor.articles.map{|art| art.comments.count}.sum)*0.8)+((@autor.articles.count)*10)+10 %>
+
 
 <%= link_to 'Back', articles_path %>
