@@ -13,3 +13,14 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require Chart.bundle
+//= require chartkick
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//= require foundation
+
+$(function(){ $(document).foundation(); });
+$(document).on('turbolinks:load', function() {
+  $(function(){ $(document).foundation(); });
+});

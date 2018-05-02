@@ -6,4 +6,9 @@ class AutorsController < ApplicationController
     render '/autors/for_autor'
   end
 
+  def charts
+    @autor = current_autor
+    @articles = @autor.articles.all
+    render '/autors/_charts'
+  end
 end

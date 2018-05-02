@@ -1,26 +1,27 @@
-  <%= form_with scope: :article, url: articles_path, local: true do |form| %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
-
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.label :category_id %><br>
-    <% category_array = Category.all.map {|category| [category.name,category.id]} %>
-    <%= select(:article, :category_id, options_for_select(category_array)) %>
-  </p>
-<p>You can set time of published</p>
-  <p>
-    <%= form.label :published_at %><br>
-    <%= form.date_field :published_at %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+  <div class="medium-6 large-offset-1 cell">
+      <%= form_with scope: :article, url: articles_path, local: true do |form| %>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+  </div>
+  <div class="medium-6 large-offset-1 cell">
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+  </div>
+</div>
+  <label>
+    <div class="small-1 large-offset-1 cell">
+      <%= form.label :category_id %><br>
+      <% category_array = Category.all.map {|category| [category.name,category.id]} %>
+      <%= select(:article, :category_id, options_for_select(category_array)) %>
+    </div>
+    <div class="small-2 large-offset-1 cell">
+      <p>You can set time of published</p>
+      <%= form.date_field :published_at %>
+      <%= form.submit %>
+      <% end %>
+    </div>
 <%= link_to 'Back', articles_path %>
+</div>
+</div>

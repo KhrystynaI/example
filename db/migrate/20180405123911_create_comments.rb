@@ -4,6 +4,6 @@ class CreateComments < ActiveRecord::Migration[5.1]
       t.text :body
       t.belongs_to :article
       t.timestamps
-  end
+    end
 end
 end

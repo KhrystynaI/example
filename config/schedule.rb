@@ -1,10 +1,11 @@
 set :output, './log/cron.log'
-every :day  do
-  rake "articles:articlelist"
+every :day do
+  rake 'articles:articlelist'
 end
 
-
-
+every :day do
+  rake 'salary:salary'
+end
 
 # Use this file to easily define all of your cron jobs.
 #
