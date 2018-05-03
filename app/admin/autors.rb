@@ -20,7 +20,7 @@ ActiveAdmin.register Autor do
     column :lastname
     column :alias
     column :salary do |autor|
-      autor.salary = (autor.articles.map { |art| art.comments.count }.sum * 0.8) + (autor.articles.count * 10) + 10
+      autor.salary = (autor.articles.map { |art| art.comments.count}.sum* 0.8) + (autor.articles.count * 10) + 10
     end
     column :list_of_article do |autor|
       autor.articles.map { |art| link_to(art.title, admin_article_path(art.id)) }.join(', ').html_safe
