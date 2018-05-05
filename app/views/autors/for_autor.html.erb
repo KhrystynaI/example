@@ -63,7 +63,7 @@
         <td><%= @autor.articles.count%></td>
         <td><%= @autor.articles.map {|article| article.comments.count}.join(', ')%></td>
         <td><%= @autor.articles.map {|article| article.category.name}.join(', ')%></td>
-        <td><%= ((@autor.articles.map{|art| art.comments.count}sum*0.8)+((@autor.articles.count)*10)+10 %></td>
+        <td><%= ((@autor.articles.map{|art| art.comments.count}).sum*0.8)+((@autor.articles.count)*10)+10 %></td>
   </table>
   </div>
   </div>

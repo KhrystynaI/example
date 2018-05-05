@@ -46,7 +46,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper', '~> 1.2'
+  gem 'chromedriver-helper'
   gem 'rspec-rails', '~> 3.6'
   # Use Factories to generate data for testing and seeds.
   gem 'rspec_junit_formatter'
