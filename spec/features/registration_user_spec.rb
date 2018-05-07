@@ -9,7 +9,7 @@ feature 'User registration', type: :system do
     click_on 'Articles'
     click_on 'New article'
     sign_in autor
-    click_on "Back"
+    visit articles_path
     click_on 'Comment for user'
     click_on "Logout"
     click_on 'Articles'

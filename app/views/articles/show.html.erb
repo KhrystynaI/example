@@ -22,12 +22,12 @@
   </p>
 <%end%>
 <h5>Add a comment:</h5>
+
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
-    <label>
-    <%= form.text_area :body %>
-  </label>
-    <%= form.submit %>
-  <%end%>
+<%= form.text_area :body %>
+<%= form.hidden_field :user_id, :value => current_user.id%>
+<%= form.submit %>
+<%end%>
 <%= link_to 'Back', articles_path %>
 </div>
 </div>

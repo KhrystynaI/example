@@ -1,3 +1,40 @@
-<h1>newspaper</h1>
+<div class="grid-container">
+<div><h1>newspaper</h1></div>
+</div>
+<div class="grid-container">
+<div class="grid-x grid-padding-x">
+  <div class="cell small-6 auto">
 <%= link_to 'Articles', articles_url %>
+</div>
+<div class="cell small-6 auto">
 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+</div>
+</div>
+</div>
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+  <div class = "cell small-6 auto" id = 'weather'>
+</div>
+  <div class = "cell small-6 auto" id = 'humidity'>
+</div>
+</div>
+<script>
+
+async function getWeather(id){
+fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`)
+.then(result => {
+return result.json();
+})
+.then(data => {
+  const today = data.consolidated_weather[0];
+  console.log(data);
+  document.getElementById("weather").innerHTML =`temperature in ${data.title} stay between ${parseInt(today.min_temp)} °C and ${parseInt(today.max_temp)} °C`
+  document.getElementById("humidity").innerHTML = `humidity ${today.humidity} % and it looks like "${today.weather_state_name}"`
+
+})
+.catch(error => console.log(error));
+}
+getWeather(924938);
+</script>
+</div>
+</div>

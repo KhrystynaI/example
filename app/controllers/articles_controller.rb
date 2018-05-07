@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    flash.now[:alert] = 'you are user'
+    flash.now[:alert] = 'you are'+"#{current_user}"
     @article = Article.find(params[:id])
   end
 
@@ -14,9 +14,9 @@ class ArticlesController < ApplicationController
 
   def create
     @autor = current_autor
-    @article = @autor.articles.build(article_params)
+    @article = @autor.articles.create(article_params)
     redirect_to autors_for_autor_path if @article.save!
-end
+  end
 
   def edit
     @article = Article.find(params[:id])
@@ -24,19 +24,23 @@ end
 
   def update
     @article = Article.find(params[:id])
-
-    if @article.update(article_params)
-      redirect_to articles_path
-    else
-      render 'edit'
+    if current_autor.id == @article.autor_id
+      if @article.update(article_params)
+        redirect_to articles_path
+      else
+        render 'edit'
+      end
+    else render plain: "article can change only its autor or admin"
     end
   end
 
   def destroy
     @article = Article.find(params[:id])
+    if current_autor.id == @article.autor_id
     @article.destroy
-
     redirect_to articles_path
+  else render plain: "article can destroy only its autor or admin"
+  end
   end
 
   private

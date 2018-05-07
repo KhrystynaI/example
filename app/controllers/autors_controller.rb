@@ -1,3 +1,4 @@
+
 class AutorsController < ApplicationController
   before_action :authenticate_autor!
   def for_autor
@@ -10,5 +11,5 @@ class AutorsController < ApplicationController
     @autor = current_autor
     @articles = @autor.articles.all
     render '/autors/_charts'
-  end
+end
 end

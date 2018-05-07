@@ -4,6 +4,7 @@ class Article < ApplicationRecord
   has_many :comments, dependent: :destroy
   before_save :check_published
   before_save :check_status
+  has_many :users, through: :comments
 
   scope :when_published, proc {
     where(published: true)

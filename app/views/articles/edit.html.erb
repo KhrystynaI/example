@@ -1,12 +1,8 @@
 <div class="grid-container">
+  <%= form_with(model: @article, local: true) do |form| %>
   <div class="grid-x grid-padding-x">
-    <div class="small-1 large-offset-1 cell">
+    <div class="medium-6 large-offset-1 cell">
 <h3>Edit article</h3>
-</div>
-</div>
-
-<%= form_with(model: @article, local: true) do |form| %>
-
 <% if @article.errors.any? %>
 <div id="error_explanation">
   <h2>
@@ -19,37 +15,30 @@
   </ul>
 </div>
 <% end %>
-
-    <div class="grid-x grid-margin-x">
-      <div class="medium-6 cell">
         <label>
           <%= form.label :title %><br>
           <%= form.text_field :title %>
         </label>
       </div>
-      <div class="medium-6 cell">
+      <div class="medium-6 large-offset-1 cell">
         <label>
           <%= form.label :body %><br>
           <%= form.text_area :body %>
         </label>
       </div>
     </div>
-      <div class="grid-x grid-padding-x">
-        <label>
-          <div class="small-2 large-offset-1 cell">
-            <%= form.label :category_id %><br>
-            <% category_array = Category.all.map {|category| [category.name,category.id]} %>
-            <%= select(:article, :category_id, options_for_select(category_array)) %>
-        </label>
-        <label>
-          <%= form.submit %>
-          <% end %>
-        </label>
+    <div class="grid-x grid-padding-x">
+      <div class="medium-6 large-offset-1 cell">
+        <%= form.label :category_id %><br>
+        <% category_array = Category.all.map {|category| [category.name,category.id]} %>
+        <%= select(:article, :category_id, options_for_select(category_array)) %>
       </div>
+      <div class="medium-6 large-offset-1 cell">
+        <p>You can set time of published</p>
+        <%= form.date_field :published_at %>
+        <%= form.submit %>
+      </div>
+      <% end %>
     </div>
-      <div class="grid-x grid-padding-x">
-      <div class="small-1 large-offset-1 cell">
 <%= link_to 'Back', articles_path %>
-</div>
-</div>
 </div>
