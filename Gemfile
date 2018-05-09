@@ -30,6 +30,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 # Build administrative panel with
 gem 'activeadmin', '~> 1.2'
+gem 'prawn', '~>2.2.2'
+gem 'prawn-table'
+gem 'prawn-graph', ' ~> 1.0'
+gem 'groupdate'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'chartkick'

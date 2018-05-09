@@ -9,13 +9,13 @@
   </div>
   <div class="small-2 small-offset-1 cell">
     <p>count of comments</p>
-    <%= bar_chart @autor.articles.map{|art| {name: art.title.to_s.byteslice(0..9), data: art.comments.group(:created_at).count}}, width: "500px", height: "400px", colors: ["#b00", "#666", "b007", "#670"]%>
+    <%= bar_chart @autor.articles.map{|art| {name: art.title.to_s.byteslice(0..9), data: art.comments.group_by_day(:created_at).count}}, width: "500px", height: "400px", colors: ["#b00", "#666", "b007", "#670"]%>
   </div>
 </div>
 <div class="grid-x grid-margin-x">
   <div class="small-2 small-offset-1 cell">
     <p>when created</p>
-    <%= line_chart Article.group(:created_at).count, width: "500px", height: "300px", colors: ["#b00", "#666", "b007", "#670"] %>
+    <%= line_chart Article.group_by_day(:created_at).count, width: "500px", height: "300px", colors: ["#b00", "#666", "b007", "#670"] %>
   </div>
   <div class="small-2 small-offset-3 cell">
     <p>salary</p>
@@ -23,7 +23,10 @@
   </div>
 </div>
 <div class="grid-x">
-  <div class="cell large-offset-1">
+  <div class="small-2 small-offset-1 cell">
     <%= link_to 'Back', articles_path %>
+  </div>
+  <div class="small-2 small-offset-1 cell">
+    <%= link_to "download PDF", autors_charts_url(format: "pdf")%>
   </div>
 </div>

@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    flash.now[:alert] = 'you are'+"#{current_user}"
+    flash.now[:alert] = 'you are '+"#{current_user.name || current_user.id}"
     @article = Article.find(params[:id])
   end
 
@@ -37,10 +37,10 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     if current_autor.id == @article.autor_id
-    @article.destroy
-    redirect_to articles_path
-  else render plain: "article can destroy only its autor or admin"
-  end
+      @article.destroy
+      redirect_to articles_path
+    else render plain: "article can destroy only its autor or admin"
+    end
   end
 
   private
