@@ -7,7 +7,7 @@
   <div class="medium-6 large-offset-1 cell">
 <table style="width:1600px;">
   <tr>
-    <th>Title</th>
+    <th >Title</th>
     <th>status</th>
     <th>published_at</th>
     <th>comments</th>
@@ -71,4 +71,32 @@
     <div class="cell large-offset-1">
     <%= link_to 'Back', articles_path %>
   </div>
+</div>
+<div class="grid-x">
+  <div class="medium-6 large-offset-1 cell">
+    <label>Select color
+            <select id="color">
+              <option value="#666">1</option>
+              <option value="#674">2</option>
+              <option value="#655">3</option>
+              <option value="#642">4</option>
+            </select>
+</label>
+</div>
+<div class="medium-6 large-offset-1 cell">
+  <button class="button" type="button" onclick="changeColor()">Change colors</button>
+</div>
   </div>
+  <script>
+
+  function changeColor(){
+    var x = document.getElementsByTagName("TH");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = document.getElementById("color").value;
+
+    }
+
+  };
+
+  </script>

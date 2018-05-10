@@ -20,10 +20,10 @@ class ExportPdf
       end
     end
     bounding_box [10,350], :width => 900, :height => 600 do
-      charts_for_autor(@autor)
+      charts_for_autor_comments(@autor)
     end
     bounding_box [10,150], :width => 900, :height => 600 do
-      charts_for_autor1(@autor)
+      charts_for_autor_category(@autor)
     end
   end
 
