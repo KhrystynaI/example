@@ -32,6 +32,7 @@ gem 'devise', '~> 4.3'
 gem 'activeadmin', '~> 1.2'
 gem 'prawn', '~>2.2.2'
 gem 'prawn-table'
+gem 'highcharts-rails'
 gem 'prawn-graph', ' ~> 1.0'
 gem 'groupdate'
 # Use ActiveModel has_secure_password
@@ -55,6 +56,8 @@ group :development, :test do
   # Use Factories to generate data for testing and seeds.
   gem 'rspec_junit_formatter'
   gem 'factory_bot'
+  gem 'mina'
+  gem 'mina-whenever'
 end
 
 group :development do
@@ -65,7 +68,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem 'mina'
+
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

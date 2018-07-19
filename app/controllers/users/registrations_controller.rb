@@ -3,7 +3,12 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
+  before_filter :configure_permitted_parameters
 
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up).push(:name)
+      devise_parameter_sanitizer.permit(:account_update).push(:name)
+    end
   # GET /resource/sign_up
   # def new
   #   super
