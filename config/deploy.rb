@@ -1,7 +1,7 @@
 require 'mina/rails'
 require 'mina/git'
-# require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
-require 'mina/rvm'    # for rvm support. (https://rvm.io)
+require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
+#require 'mina/rvm'    # for rvm support. (https://rvm.io)
 require 'mina/whenever'
 
 # Basic settings:
@@ -10,14 +10,14 @@ require 'mina/whenever'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :application_name, 'example'
-set :domain, 'example.devarena.lviv.ua'
+set :application_name, 'newspaper'
+set :domain, 'khrystyna-example.ua'
 set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 
 # Optional settings:
-set :user, 'deploy'          # Username in the server to SSH to.
+set :user, 'ubuntu'          # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
 
@@ -37,10 +37,10 @@ set :shared_files, fetch(:shared_files, []).push(
 task :remote_environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
-  # invoke :'rbenv:load'
+   invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
-  invoke :'rvm:use', 'ruby-2.5.0@default'
+  #invoke :'rvm:use', 'ruby-2.5.0@default'
 end
 
 # Put any custom commands you need to run at setup
