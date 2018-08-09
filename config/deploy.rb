@@ -11,7 +11,7 @@ require 'mina/whenever'
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :application_name, 'example'
-set :domain, 'http://18.222.197.62/'
+set :domain, '18.222.197.62'
 set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
