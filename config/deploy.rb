@@ -60,11 +60,11 @@ desc "Deploys the current version to the server."
 task deploy: :remote_environment do
     deploy do
     invoke :'git:clone'
-    invoke :'ubuntu:link_shared_paths'
+    invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
-    invoke :'ubuntu:cleanup'
+    invoke :'deploy:cleanup'
 
     on :launch do
       invoke :'puma:restart'
