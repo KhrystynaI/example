@@ -46,7 +46,7 @@ end
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 task :setup do
-  command %(gem install bundler)
+  #command %(gem install bundler)
   #command %[touch "#{fetch(:shared_path)}/config/database.yml"]
   #command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
   #command %[touch "#{fetch(:shared_path)}/config/puma.rb"]
@@ -54,44 +54,11 @@ task :setup do
   # command %{rbenv install 2.3.0 --skip-existing}
 end
 
-task setup: :remote_environment do
-  deploy_to   = fetch(:deploy_to)
-  shared_path = fetch(:shared_path)
-  #command %(sudo mkdir -p "#{deploy_to}")
-  command %(sudo chown -R  "#{deploy_to}")
 
-  command %(mkdir -p "#{shared_path}/log")
-  command %(chmod g+rx,u+rwx "#{shared_path}/log")
-
-  command %(mkdir -p "#{shared_path}/config")
-  command %(chmod g+rx,u+rwx "#{shared_path}/config")
-
-  command %(mkdir -p "#{shared_path}/db")
-  command %(chmod g+rx,u+rwx "#{shared_path}/db")
-
-  command %(mkdir -p "#{shared_path}/upload")
-  command %(chmod g+rx,u+rwx "#{shared_path}/upload")
-
-  command %(touch "#{shared_path}/config/database.yml")
-  command %(touch "#{shared_path}/config/secrets.yml")
-  command %(echo "-----> Be sure to edit '#{shared_path}/config/database.yml' and 'secrets.yml'.")
-
-  command %(
-    repo_host=`echo $repo | sed -e 's/.*@//g' -e 's/:.*//g'` &&
-    repo_port=`echo $repo | grep -o ':[0-9]*' | sed -e 's/://g'` &&
-    if [ -z "${repo_port}" ]; then repo_port=22; fi &&
-    ssh-keyscan -p $repo_port -H $repo_host >> ~/.ssh/known_hosts
-  )
-end
 
 desc "Deploys the current version to the server."
 task deploy: :environment do
-  # uncomment this line to make sure you pushed your local branch to the remote origin
-  # invoke :'git:ensure_pushed'
-  deploy do
-    # Put things that will set up an empty directory into a fully set-up
-    # instance of your project.
-    invoke :'whenever:update'
+    deploy do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
@@ -100,12 +67,31 @@ task deploy: :environment do
     invoke :'deploy:cleanup'
 
     on :launch do
-      in_path(fetch(:current_path)) do
-        command %{mkdir -p tmp/}
-        command %{touch tmp/restart.txt}
-      end
+      invoke :'puma:restart'
     end
   end
+end
+
+namespace :puma do
+  desc "Start the application"
+  task :start do
+    command 'echo "-----> Start Puma"'
+    command "sudo start puma-manager", :pty => false
+  end
+
+  desc "Stop the application"
+  task :stop do
+    command 'echo "-----> Stop Puma"'
+    command "sudo stop puma-manager"
+  end
+
+  desc "Restart the application"
+  task :restart do
+    command 'echo "-----> Restart Puma"'
+    command "sudo restart puma-manager"
+  end
+  # uncomment this line to make sure you pushed your local branch to the remote origin
+  # invoke :'git:ensure_pushed'
 
   # you can use `run :local` to run tasks on local machine before of after the deploy scripts
   # run(:local){ say 'done' }
