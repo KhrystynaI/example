@@ -12,7 +12,7 @@ require 'mina/whenever'
 
 set :application_name, 'example'
 set :domain, '18.222.197.62'
-set :deploy_to, '/ubuntu/example'
+set :deploy_to, 'example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 
@@ -57,7 +57,7 @@ end
 task setup: :remote_environment do
   deploy_to   = fetch(:deploy_to)
   shared_path = fetch(:shared_path)
-  command %(sudo mkdir -p "#{deploy_to}")
+  #command %(sudo mkdir -p "#{deploy_to}")
   command %(sudo chown -R  "#{deploy_to}")
 
   command %(mkdir -p "#{shared_path}/log")
