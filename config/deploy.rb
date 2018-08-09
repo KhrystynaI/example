@@ -15,7 +15,7 @@ set :domain, '18.222.197.62'
 set :deploy_to, 'example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
-
+set :default_env, { path: "/home/ubuntu/bin:$PATH" }
 # Optional settings:
 set :user, 'ubuntu'          # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
