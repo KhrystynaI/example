@@ -10,8 +10,8 @@ require 'mina/whenever'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :application_name, 'newspaper'
-set :domain, 'khrystyna-example.ua'
+set :application_name, 'example'
+set :domain, 'http://18.222.197.62/'
 set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
