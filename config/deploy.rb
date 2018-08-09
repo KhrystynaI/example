@@ -57,7 +57,7 @@ end
 
 
 desc "Deploys the current version to the server."
-task deploy: :environment do
+task deploy: :remote_environment do
     deploy do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
