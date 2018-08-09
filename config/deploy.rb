@@ -12,10 +12,10 @@ require 'mina/whenever'
 
 set :application_name, 'example'
 set :domain, '18.222.197.62'
-set :deploy_to, 'example'
+set :deploy_to, 'ubuntu/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
-set :default_env, { path: "/home/ubuntu/bin:$PATH" }
+
 # Optional settings:
 set :user, 'ubuntu'          # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
@@ -60,11 +60,11 @@ desc "Deploys the current version to the server."
 task deploy: :remote_environment do
     deploy do
     invoke :'git:clone'
-    invoke :'deploy:link_shared_paths'
+    invoke :'ubuntu:link_shared_paths'
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
-    invoke :'deploy:cleanup'
+    invoke :'ubuntu:cleanup'
 
     on :launch do
       invoke :'puma:restart'
