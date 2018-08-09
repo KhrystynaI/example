@@ -46,10 +46,10 @@ end
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 task :setup do
-  command %[touch "#{fetch(:shared_path)}/config/database.yml"]
-  command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
-  command %[touch "#{fetch(:shared_path)}/config/puma.rb"]
-  comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
+  #command %[touch "#{fetch(:shared_path)}/config/database.yml"]
+  #command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
+  #command %[touch "#{fetch(:shared_path)}/config/puma.rb"]
+  #comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
   # command %{rbenv install 2.3.0 --skip-existing}
 end
 
