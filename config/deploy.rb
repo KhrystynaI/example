@@ -12,7 +12,7 @@ require 'mina/whenever'
 
 set :application_name, 'example'
 set :domain, '18.222.197.62'
-set :deploy_to, 'ubuntu/example'
+set :deploy_to, 'home/ubuntu/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 
