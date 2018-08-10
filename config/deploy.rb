@@ -63,9 +63,10 @@ task setup: :remote_environment do
 end
 
 desc "Deploys the current version to the server."
-task :deploy do
+task :deploy :remote_environment do
   deploy do
     comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
+    command 'pwd'
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     #invoke :'rbenv:load_env_vars'
@@ -76,6 +77,10 @@ task :deploy do
     #invoke :'deploy:cleanup'
 
     on :launch do
+      in_path(fetch(:current_path)) do
+        command %(mkdir -p tmp/)
+        command %(touch tmp/restart.txt)
+      end
       invoke :'puma:phased_restart'
     end
     invoke :'deploy:cleanup'
