@@ -61,6 +61,7 @@ group :development, :test do
   gem 'factory_bot'
   gem 'mina'
   gem 'mina-whenever'
+  gem 'mina-puma', require: false,  github: 'untitledkingdom/mina-puma'
 end
 
 group :development do
