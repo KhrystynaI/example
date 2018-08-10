@@ -51,10 +51,10 @@ task :setup do
   command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[touch "#{fetch(:shared_path)}/config/puma.rb"]
   comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
-  queue! %(mkdir -p "#{:deploy_to}/#{:shared_path}/tmp/sockets")
-  queue! %(chmod g+rx,u+rwx "#{:deploy_to}/#{:shared_path}/tmp/sockets")
-  queue! %(mkdir -p "#{:deploy_to}/#{:shared_path}/tmp/pids")
-  queue! %(chmod g+rx,u+rwx "#{:deploy_to}/#{:shared_path}/tmp/pids")
+  command %(mkdir -p "#{:deploy_to}/#{:shared_path}/tmp/sockets")
+  command %(chmod g+rx,u+rwx "#{:deploy_to}/#{:shared_path}/tmp/sockets")
+  command %(mkdir -p "#{:deploy_to}/#{:shared_path}/tmp/pids")
+  command %(chmod g+rx,u+rwx "#{:deploy_to}/#{:shared_path}/tmp/pids")
 
   # command %{rbenv install 2.3.0 --skip-existing}
 end
