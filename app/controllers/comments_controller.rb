@@ -2,10 +2,13 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-
     @article = Article.find(params[:article_id])
+    if verify_recaptcha
     @comment = @article.comments.create(comment_params)
     redirect_to article_path(@article)
+  else
+    redirect_to article_path(@article)
+  end
   end
 
   def destroy

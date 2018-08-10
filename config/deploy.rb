@@ -12,7 +12,7 @@ require 'mina/whenever'
 
 set :application_name, 'example'
 set :domain, '18.222.197.62'
-set :deploy_to, 'home/ubuntu/example'
+set :deploy_to, '../ubuntu/../../ubuntu/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 
@@ -63,9 +63,10 @@ task deploy: :remote_environment do
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
-    invoke :'deploy:cleanup'
+    #invoke :'deploy:cleanup'
 
     on :launch do
+      invoke :'deploy:cleanup'
       invoke :'puma:restart'
     end
   end
