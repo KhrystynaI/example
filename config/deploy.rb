@@ -20,7 +20,6 @@ set :branch, 'master'
 set :user, 'ubuntu'           # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
-set :releases,'../ubuntu/../../home/ubuntu/example/releases' 
 
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
@@ -56,6 +55,7 @@ task :setup do
   command %(chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/sockets")
   command %(mkdir -p "#{fetch(:shared_path)}/tmp/pids")
   command %(chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/pids")
+  command %[mkdir -p "#{fetch(:deploy_to)}/current"]
 
   # command %{rbenv install 2.3.0 --skip-existing}
 end
