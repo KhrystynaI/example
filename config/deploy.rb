@@ -62,8 +62,25 @@ task :deploy do
     invoke :'deploy:cleanup'
 
     on :launch do
-      invoke :'puma:start'
+      invoke :'puma:phased_restart'
     end
+    namespace :puma do
+  task :custom_start => :environment do
+    command %[
+      if [ -e '#{fetch(:pumactl_socket)}' ]; then
+        echo 'Puma is already running!';
+      else
+        if [ -e '#{fetch(:puma_config)}' ]; then
+          cd '#{fetch(:current_path)}' && #{fetch(:puma_cmd)} -d -e #{fetch(:puma_env)} -C #{fetch(:puma_config)}
+          sleep 1
+        else
+          echo 'Puma config is required'
+          exit 1
+        fi
+      fi
+    ]
+  end
+end
   end
 
   # you can use `run :local` to run tasks on local machine before of after the deploy scripts
