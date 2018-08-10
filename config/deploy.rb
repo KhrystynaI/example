@@ -22,7 +22,7 @@ set :user, 'ubuntu'           # Username in the server to SSH to.
 #   set :forward_agent, true     # SSH forward_agent.
 set :current_path, 'current' # What file should be the current version. Probably 'www', 'public_html' or perhaps 'current'.
 
-set :keep_releases, '3' 
+set :keep_releases, '3'
 
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
@@ -78,7 +78,7 @@ task :deploy do
     on :launch do
       invoke :'puma:phased_restart'
     end
-    invoke :'deploy:cleanup'
+    #invoke :'deploy:cleanup'
   end
 
   # you can use `run :local` to run tasks on local machine before of after the deploy scripts
