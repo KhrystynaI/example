@@ -63,7 +63,7 @@ task setup: :remote_environment do
 end
 
 desc "Deploys the current version to the server."
-task :deploy :remote_environment do
+task deploy: :remote_environment do
   deploy do
     comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
     command 'pwd'
