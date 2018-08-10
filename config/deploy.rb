@@ -20,9 +20,7 @@ set :branch, 'master'
 set :user, 'ubuntu'           # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
-set :current_path, 'current' # What file should be the current version. Probably 'www', 'public_html' or perhaps 'current'.
-
-set :keep_releases, '3'
+set :releases,'../ubuntu/../../home/ubuntu/example/releases' 
 
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
@@ -31,10 +29,10 @@ set :keep_releases, '3'
 #set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/secrets.yml')
 set :shared_paths, ['config/database.yml', 'tmp/pids', 'tmp/sockets']
 set :shared_dirs, fetch(:shared_dirs, []).push('log')
-#set :shared_files, fetch(:shared_files, []).push(
-#  'config/secrets.yml',
-#  'db/production.sqlite3'
-#)
+set :shared_files, fetch(:shared_files, []).push(
+  'config/secrets.yml',
+  'db/production.sqlite3'
+)
 
 # This task is the environment that is loaded for all remote run commands, such as
 # `mina deploy` or `mina rake`.
