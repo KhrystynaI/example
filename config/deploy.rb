@@ -3,6 +3,7 @@ require 'mina/git'
  require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
 # require 'mina/rvm'    # for rvm support. (https://rvm.io)
 require 'mina/whenever'
+require 'mina/puma'
 
 # Basic settings:
 #   domain       - The hostname to SSH to.
@@ -23,8 +24,14 @@ set :user, 'ubuntu'           # Username in the server to SSH to.
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
 # run `mina -d` to see all folders and files already included in `shared_dirs` and `shared_files`
-set :shared_dirs, fetch(:shared_dirs, []).push('public/assets')
-set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/secrets.yml')
+#set :shared_dirs, fetch(:shared_dirs, []).push('public/assets')
+#set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/secrets.yml')
+set :shared_paths, ['config/database.yml', 'tmp/pids', 'tmp/sockets']
+set :shared_dirs, fetch(:shared_dirs, []).push('log')
+set :shared_files, fetch(:shared_files, []).push(
+  'config/secrets.yml',
+  'db/production.sqlite3'
+)
 
 # This task is the environment that is loaded for all remote run commands, such as
 # `mina deploy` or `mina rake`.
@@ -44,6 +51,10 @@ task :setup do
   command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[touch "#{fetch(:shared_path)}/config/puma.rb"]
   comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
+  queue! %(mkdir -p "#{deploy_to}/#{shared_path}/tmp/sockets")
+  queue! %(chmod g+rx,u+rwx "#{deploy_to}/#{shared_path}/tmp/sockets")
+  queue! %(mkdir -p "#{deploy_to}/#{shared_path}/tmp/pids")
+  queue! %(chmod g+rx,u+rwx "#{deploy_to}/#{shared_path}/tmp/pids")
 
   # command %{rbenv install 2.3.0 --skip-existing}
 end
@@ -64,23 +75,6 @@ task :deploy do
     on :launch do
       invoke :'puma:phased_restart'
     end
-    namespace :puma do
-  task :custom_start => :environment do
-    command %[
-      if [ -e '#{fetch(:pumactl_socket)}' ]; then
-        echo 'Puma is already running!';
-      else
-        if [ -e '#{fetch(:puma_config)}' ]; then
-          cd '#{fetch(:current_path)}' && #{fetch(:puma_cmd)} -d -e #{fetch(:puma_env)} -C #{fetch(:puma_config)}
-          sleep 1
-        else
-          echo 'Puma config is required'
-          exit 1
-        fi
-      fi
-    ]
-  end
-end
   end
 
   # you can use `run :local` to run tasks on local machine before of after the deploy scripts
