@@ -49,7 +49,7 @@ end
 
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
-task setup: :remote_environment do
+task setup: :environment do
   deploy_to   = fetch(:deploy_to)
   shared_path = fetch(:shared_path)
   command %[touch "#{fetch(:shared_path)}/config/database.yml"]
@@ -66,7 +66,7 @@ task setup: :remote_environment do
 end
 
 desc "Deploys the current version to the server."
-task deploy: :remote_environment do
+task deploy: :environment do
   deploy do
     comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
     command 'pwd'
