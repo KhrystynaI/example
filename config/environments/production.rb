@@ -10,6 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  config.secret_key = '09323062230a540c9a2a2123c425920e74ee5a2154d412e203ca4fee8d4a37bb49ada2a05e1dd4882d58640585f8dbd61c40af31849f2075596da844a79856f2'
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
