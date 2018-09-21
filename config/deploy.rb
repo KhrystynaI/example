@@ -13,7 +13,7 @@ require 'mina/bundler'
 #   deploy_to    - Path to deploy into.
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
-
+set :rails_env, 'production'
 set :application_name, 'example'
 set :domain, '18.222.197.62'
 set :deploy_to, 'example'
@@ -23,7 +23,7 @@ set :branch, 'master'
 set :user, 'ubuntu'           # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
-set :rails_env, 'production'
+
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
 # run `mina -d` to see all folders and files already included in `shared_dirs` and `shared_files`
