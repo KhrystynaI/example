@@ -52,13 +52,14 @@ end
 task setup: :remote_environment do
   deploy_to   = fetch(:deploy_to)
   shared_path = fetch(:shared_path)
-  command %[sudo mkdir  "#{fetch(:deploy_to)}/releases"]
-  command %[sudo mkdir  "#{fetch(:deploy_to)}/current"]
-  command %[sudo touch "#{fetch(:shared_path)}/config/database.yml"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/releases"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/current"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/vendor/bundle"]
+  command %[ sudo touch "#{fetch(:shared_path)}/config/database.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/puma.rb"]
   comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
-  command %(sudo mkdir -p "#{fetch(:shared_path)}/tmp/sockets")
+  command %( sudo mkdir -p "#{fetch(:shared_path)}/tmp/sockets")
   command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/sockets")
   command %(sudo mkdir -p "#{fetch(:shared_path)}/tmp/pids")
   command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/pids")
