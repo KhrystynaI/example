@@ -79,7 +79,7 @@ task deploy: :remote_environment do
     command 'pwd'
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
-    invoke :'rbenv:load_env_vars'
+    invoke :'rbenv:load'
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
     command %{#{fetch(:rails)} db:seed}
