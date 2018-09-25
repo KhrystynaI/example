@@ -16,7 +16,7 @@ require 'mina/bundler'
 set :rails_env, 'production'
 set :application_name, 'example'
 set :domain, '18.222.197.62'
-set :deploy_to, 'example'
+set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 # Optional settings:
