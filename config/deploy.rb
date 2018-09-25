@@ -29,7 +29,7 @@ set :user, 'ubuntu'           # Username in the server to SSH to.
 # run `mina -d` to see all folders and files already included in `shared_dirs` and `shared_files`
 #set :shared_dirs, fetch(:shared_dirs, []).push('public/assets')
 #set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/secrets.yml')
-set :shared_paths, ['config/database.yml', 'log','tmp/pids', 'tmp/sockets']
+set :shared_paths, ['config/database.yml', 'log']
 set :shared_dirs, fetch(:shared_dirs, []).push('log')
 set :shared_files, fetch(:shared_files, []).push(
   'config/secrets.yml',
@@ -63,10 +63,10 @@ task setup: :remote_environment do
   command %[sudo touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/puma.rb"]
   comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
-  command %( sudo mkdir -p "#{fetch(:shared_path)}/tmp/sockets")
-  command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/sockets")
-  command %(sudo mkdir -p "#{fetch(:shared_path)}/tmp/pids")
-  command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/pids")
+  #command %( sudo mkdir -p "#{fetch(:shared_path)}/tmp/sockets")
+  #command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/sockets")
+  #command %(sudo mkdir -p "#{fetch(:shared_path)}/tmp/pids")
+  #command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/pids")
 
 
   # command %{rbenv install 2.3.0 --skip-existing}
@@ -79,7 +79,7 @@ task deploy: :remote_environment do
     command 'pwd'
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
-    invoke :'rbenv:load'
+    #invoke :'rbenv:load'
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
     command %{#{fetch(:rails)} db:seed}
@@ -87,10 +87,12 @@ task deploy: :remote_environment do
     invoke :'deploy:cleanup'
 
     on :launch do
-      in_path(fetch(:current_path)) do
-        command %(mkdir -p tmp/)
-        command %(touch tmp/restart.txt)
-      end
+      queue "mkdir -p #{deploy_to}/#{current_path}/tmp/"
+      queue "touch #{deploy_to}/#{current_path}/tmp/restart.txt"
+      #in_path(fetch(:current_path)) do
+      #  command %(mkdir -p tmp/)
+      #  command %(touch tmp/restart.txt)
+      #end
       invoke :'puma:phased_restart'
     end
     #invoke :'deploy:cleanup'
