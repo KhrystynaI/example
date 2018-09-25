@@ -20,7 +20,7 @@ set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 # Optional settings:
-#set :user, 'root'           # Username in the server to SSH to.
+set :user, '%sudo'           # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
 
@@ -76,7 +76,7 @@ desc "Deploys the current version to the server."
 task deploy: :remote_environment do
   deploy do
     comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
-    command 'sudo'
+    command 'pwd'
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     #invoke :'rbenv:load_env_vars'
