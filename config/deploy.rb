@@ -16,7 +16,7 @@ require 'mina/bundler'
 set :rails_env, 'production'
 set :application_name, 'example'
 set :domain, '18.222.197.62'
-set :use_sudo, true
+
 set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
@@ -64,6 +64,7 @@ task setup: :remote_environment do
   command %[sudo mkdir "#{fetch(:deploy_to)}/shared/db"]
   command %[sudo mkdir "#{fetch(:deploy_to)}/shared/config"]
   command %[sudo mkdir "#{fetch(:deploy_to)}/shared/public"]
+  command %[sudo mkdir "#{fetch(:deploy_to)}/shared/public/assets"]
   command %[ sudo touch "#{fetch(:shared_path)}/config/database.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/puma.rb"]
@@ -79,6 +80,7 @@ end
 
 desc "Deploys the current version to the server."
 task deploy: :remote_environment do
+  set :use_sudo, true
   deploy do
     comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
     command 'pwd'
