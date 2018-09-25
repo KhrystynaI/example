@@ -14,6 +14,7 @@ require 'mina/bundler'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 set :rails_env, 'production'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/rbenv exec"
 set :application_name, 'example'
 set :domain, '18.222.197.62'
 set :deploy_to, 'example'
@@ -41,7 +42,7 @@ set :shared_files, fetch(:shared_files, []).push(
 task :remote_environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
-   #invoke :'rbenv:load'
+   invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
   # invoke :'rvm:use', 'ruby-1.9.3-p125@default'
