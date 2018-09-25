@@ -6,7 +6,7 @@ require 'mina/whenever'
 require 'mina/puma'
 require 'mina/bundler'
 require 'mina/bundler'
-require 'mina/nginx'
+
 
 # Basic settings:
 #   domain       - The hostname to SSH to.
