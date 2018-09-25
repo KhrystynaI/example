@@ -54,7 +54,7 @@ task setup: :remote_environment do
   shared_path = fetch(:shared_path)
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/releases"]
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/current"]
-  command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/vendor/bundle"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/vendor/bundle/log"]
   command %[ sudo touch "#{fetch(:shared_path)}/config/database.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/puma.rb"]
