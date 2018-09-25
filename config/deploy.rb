@@ -16,7 +16,7 @@ require 'mina/bundler'
 set :rails_env, 'production'
 set :application_name, 'example'
 set :domain, '18.222.197.62'
-set :deploy_to, '/var/www/html/example'
+set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 # Optional settings:
@@ -52,8 +52,8 @@ end
 task setup: :remote_environment do
   deploy_to   = fetch(:deploy_to)
   shared_path = fetch(:shared_path)
-  command %[ sudo touch "#{fetch(:deploy_to)}/releases"]
-  #command %[ sudo touch "#{fetch(:deploy_to)}/vendor"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/releases"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/current"]
   command %[ sudo touch "#{fetch(:shared_path)}/config/database.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/puma.rb"]
@@ -62,7 +62,7 @@ task setup: :remote_environment do
   command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/sockets")
   command %(sudo mkdir -p "#{fetch(:shared_path)}/tmp/pids")
   command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/pids")
-  command %[sudo mkdir -p "#{fetch(:deploy_to)}/current"]
+
 
   # command %{rbenv install 2.3.0 --skip-existing}
 end
