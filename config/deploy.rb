@@ -20,7 +20,7 @@ set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 # Optional settings:
-set :user, 'ubuntu'           # Username in the server to SSH to.
+set :user, 'deploy'           # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
 
