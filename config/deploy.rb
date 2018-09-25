@@ -14,6 +14,7 @@ require 'mina/bundler'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 set :rails_env, 'production'
+set :rbenv_path, "home/ubuntu/.rbenv"
 set :application_name, 'example'
 set :domain, '18.222.197.62'
 set :deploy_to, 'example'
