@@ -66,10 +66,10 @@ task setup: :remote_environment do
   command %[sudo touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[sudo touch "#{fetch(:shared_path)}/config/puma.rb"]
   comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
-  #command %( sudo mkdir -p "#{fetch(:shared_path)}/tmp/sockets")
-  #command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/sockets")
-  #command %(sudo mkdir -p "#{fetch(:shared_path)}/tmp/pids")
-  #command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/pids")
+  command %( sudo mkdir -p "#{fetch(:shared_path)}/tmp/sockets")
+  command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/sockets")
+  command %(sudo mkdir -p "#{fetch(:shared_path)}/tmp/pids")
+  command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/pids")
 
 
   # command %{rbenv install 2.3.0 --skip-existing}
