@@ -5,7 +5,7 @@ require 'mina/git'
 require 'mina/whenever'
 require 'mina/puma'
 require 'mina/bundler'
-require 'mina/bundler'
+
 
 
 # Basic settings:
@@ -19,9 +19,9 @@ set :domain, '18.222.197.62'
 set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
-set :ssh_options, '-A'
+#set :ssh_options, '-A'
 # Optional settings:
-set :user, 'ubuntu'           # Username in the server to SSH to.
+set :user, 'ip-172-31-32-143'           # Username in the server to SSH to.
 #set :port, '30000'           # SSH port number.
 # set :forward_agent, true     # SSH forward_agent.
 
