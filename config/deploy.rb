@@ -59,6 +59,7 @@ task setup: :remote_environment do
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/current"]
   command %[sudo mkdir "#{fetch(:deploy_to)}/shared/vendor/bundle"]
   command %[sudo mkdir "#{fetch(:deploy_to)}/shared/log"]
+  command %[sudo mkdir "#{fetch(:deploy_to)}/shared/tmp/cache"]
   command %[sudo mkdir "#{fetch(:deploy_to)}/shared/db"]
   command %[sudo mkdir "#{fetch(:deploy_to)}/shared/config"]
   command %[sudo mkdir "#{fetch(:deploy_to)}/shared/public"]
