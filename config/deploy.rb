@@ -79,12 +79,12 @@ task deploy: :remote_environment do
     command 'pwd'
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
-    #invoke :'rbenv:load_env_vars'
+    invoke :'rbenv:load_env_vars'
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
     command %{#{fetch(:rails)} db:seed}
     invoke :'rails:assets_precompile'
-    #invoke :'deploy:cleanup'
+    invoke :'deploy:cleanup'
 
     on :launch do
       in_path(fetch(:current_path)) do
@@ -93,7 +93,7 @@ task deploy: :remote_environment do
       end
       invoke :'puma:phased_restart'
     end
-    invoke :'deploy:cleanup'
+    #invoke :'deploy:cleanup'
   end
 
   # you can use `run :local` to run tasks on local machine before of after the deploy scripts
