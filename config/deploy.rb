@@ -22,7 +22,7 @@ set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 #set :ssh_options, '-A'
 # Optional settings:
-set :user, 'ubuntu'           # Username in the server to SSH to.
+set :user, '%sudo'           # Username in the server to SSH to.
 #set :port, '30000'           # SSH port number.
 #set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
@@ -94,7 +94,6 @@ task deploy: :remote_environment do
     invoke :'deploy:cleanup'
 
     on :launch do
-      command "sudo touch deploy.lock"
       command "sudo mkdir -p #{:deploy_to}/#{:current_path}/tmp/"
       command "sudo touch #{:deploy_to}/#{:current_path}/tmp/restart.txt"
       #in_path(fetch(:current_path)) do
