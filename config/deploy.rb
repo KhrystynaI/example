@@ -97,7 +97,8 @@ task deploy: :remote_environment do
     invoke :'deploy:cleanup'
 
     on :launch do
-      command "sudo mkdir -p #{:deploy_to}/#{:current_path}/tmp/"
+      command "sudo touch 'deploy.lock'" 
+      command "sudo mkdir -p #{:deploy_to}/#{:current_path}/tmp"
       command "sudo touch #{:deploy_to}/#{:current_path}/tmp/restart.txt"
       #in_path(fetch(:current_path)) do
       #  command %(mkdir -p tmp/)
