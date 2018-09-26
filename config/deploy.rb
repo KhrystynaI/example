@@ -26,7 +26,7 @@ set :user, 'ubuntu'           # Username in the server to SSH to.
 #set :port, '30000'           # SSH port number.
 #set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
-#set :execution_mode, :system
+set :execution_mode, :system
 
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
@@ -56,11 +56,14 @@ end
 task setup: :remote_environment do
   deploy_to   = fetch(:deploy_to)
   shared_path = fetch(:shared_path)
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}"]
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/releases"]
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/current"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/vendor"]
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/vendor/bundle"]
-  command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/log"]
-  command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/tmp/cache"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/log"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/tmp"]
+  command %[sudo mkdir -p "#{fetch(:deploy_to)}/tmp/cache"]
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/db"]
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/config"]
   command %[sudo mkdir -p "#{fetch(:deploy_to)}/shared/public"]
