@@ -34,7 +34,7 @@ set :execution_mode, :system
 set :shared_dirs, fetch(:shared_dirs, []).push('public/assets')
 set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/secrets.yml')
 set :shared_paths, ['config/database.yml', 'log']
-#set :shared_dirs, fetch(:shared_dirs, []).push('log')
+set :shared_dirs, fetch(:shared_dirs, []).push('log')
 set :shared_files, fetch(:shared_files, []).push(
   'config/secrets.yml',
   'db/production.sqlite3'
