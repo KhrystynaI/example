@@ -22,7 +22,7 @@ set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 #set :ssh_options, '-A'
 # Optional settings:
-set :user, 'ubuntu'           # Username in the server to SSH to.
+set :user, 'ubuntu@ec2-18-222-197-62.us-east-2.compute.amazonaws.com'           # Username in the server to SSH to.
 #set :port, '30000'           # SSH port number.
 #set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
