@@ -94,12 +94,12 @@ task deploy: :remote_environment do
     invoke :'deploy:cleanup'
 
     on :launch do
-      #queue "mkdir -p #{deploy}/#{current_path}/tmp/"
-      #queue "touch #{deploy}/#{current_path}/tmp/restart.txt"
-      in_path(fetch(:current_path)) do
-        command %(mkdir -p tmp/)
-        command %(touch tmp/restart.txt)
-      end
+      queue "sudo mkdir -p #{deploy}/#{current_path}/tmp/"
+      queue "sudo touch #{deploy}/#{current_path}/tmp/restart.txt"
+      #in_path(fetch(:current_path)) do
+      #  command %(mkdir -p tmp/)
+      #  command %(touch tmp/restart.txt)
+      #end
       invoke :'puma:phased_restart'
     end
     #invoke :'deploy:cleanup'
