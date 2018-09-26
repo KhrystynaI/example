@@ -84,8 +84,7 @@ task deploy: :remote_environment do
   deploy do
     comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
     command 'pwd'
-    command "sudo touch deploy.lock"
-    invoke :'git:clone'
+        invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     #invoke :'rbenv:load'
     invoke :'bundle:install'
@@ -95,6 +94,7 @@ task deploy: :remote_environment do
     invoke :'deploy:cleanup'
 
     on :launch do
+      command "sudo touch deploy.lock"
       command "sudo mkdir -p #{:deploy_to}/#{:current_path}/tmp/"
       command "sudo touch #{:deploy_to}/#{:current_path}/tmp/restart.txt"
       #in_path(fetch(:current_path)) do
