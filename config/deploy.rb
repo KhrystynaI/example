@@ -84,6 +84,7 @@ task deploy: :remote_environment do
   deploy do
     comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
     command 'pwd'
+    command "sudo touch deploy.lock"
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     #invoke :'rbenv:load'
