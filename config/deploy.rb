@@ -39,7 +39,7 @@ set :shared_files, fetch(:shared_files, []).push(
   'db/production.sqlite3'
 )
 
-task :switch_user do command %{sudo su - root} end
+
 # This task is the environment that is loaded for all remote run commands, such as
 # `mina deploy` or `mina rake`.
 task :remote_environment do
@@ -54,7 +54,8 @@ end
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 
-#task setup: :remote_environment do
+task setup: :remote_environment do
+  command %{sudo su - root}
   #deploy_to   = fetch(:deploy_to)
   #shared_path = fetch(:shared_path)
   #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}"]
@@ -80,7 +81,7 @@ end
 
 
   # command %{rbenv install 2.3.0 --skip-existing}
-#end
+end
 
 desc "Deploys the current version to the server."
 task deploy: :remote_environment do
