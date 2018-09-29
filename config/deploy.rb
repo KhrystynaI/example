@@ -46,7 +46,7 @@ task :remote_environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
    invoke :'rbenv:load'
-
+command %{sudo su - root}
   # For those using RVM, use this to load an RVM version@gemset.
   # invoke :'rvm:use', 'ruby-1.9.3-p125@default'
 end
@@ -55,7 +55,7 @@ end
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 
 task setup: :remote_environment do
-  command %{sudo su - root}
+
   #deploy_to   = fetch(:deploy_to)
   #shared_path = fetch(:shared_path)
   #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}"]
