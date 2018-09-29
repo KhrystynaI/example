@@ -46,7 +46,6 @@ task :remote_environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
    invoke :'rbenv:load'
-command %{sudo su - root}
   # For those using RVM, use this to load an RVM version@gemset.
   # invoke :'rvm:use', 'ruby-1.9.3-p125@default'
 end
@@ -65,7 +64,7 @@ task setup: :remote_environment do
   #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/vendor/bundle"]
   #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/log"]
   #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/tmp"]
-  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/tmp/cache"]
+  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/tmp/cache"]
   #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/db"]
   #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/config"]
   #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/public"]
@@ -85,7 +84,7 @@ end
 
 desc "Deploys the current version to the server."
 task deploy: :remote_environment do
-
+command %{sudo su - root}
   deploy do
     comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
     command 'pwd'
