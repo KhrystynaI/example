@@ -16,13 +16,12 @@ require 'mina/bundler'
 set :rails_env, 'production'
 set :application_name, 'example'
 set :domain, '18.222.197.62'
-set :use_sudo, true
 set :deploy_to, '/var/www/example'
 set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 #set :ssh_options, '-A'
 # Optional settings:
-set :user, 'ubuntu'           # Username in the server to SSH to.
+set :user, 'root'           # Username in the server to SSH to.
 #set :port, '30000'           # SSH port number.
 #set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
@@ -53,33 +52,34 @@ end
 
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
-task setup: :remote_environment do
-  deploy_to   = fetch(:deploy_to)
-  shared_path = fetch(:shared_path)
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/releases"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/current"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/vendor"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/vendor/bundle"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/log"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/tmp"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/tmp/cache"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/db"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/config"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/public"]
-  command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/public/assets"]
-  command %[ sudo touch "#{fetch(:shared_path)}/config/database.yml"]
-  command %[sudo touch "#{fetch(:shared_path)}/config/secrets.yml"]
-  command %[sudo touch "#{fetch(:shared_path)}/config/puma.rb"]
-  comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
-  command %( sudo mkdir drwxr-xr-x "#{fetch(:shared_path)}/tmp/sockets")
+
+#task setup: :remote_environment do
+  #deploy_to   = fetch(:deploy_to)
+  #shared_path = fetch(:shared_path)
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/releases"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/current"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/vendor"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/vendor/bundle"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/log"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/tmp"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/tmp/cache"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/db"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/config"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/public"]
+  #command %[sudo mkdir drwxr-xr-x "#{fetch(:deploy_to)}/shared/public/assets"]
+  #command %[ sudo touch "#{fetch(:shared_path)}/config/database.yml"]
+  #command %[sudo touch "#{fetch(:shared_path)}/config/secrets.yml"]
+##  command %[sudo touch "#{fetch(:shared_path)}/config/puma.rb"]
+#  comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
+#  command %( sudo mkdir drwxr-xr-x "#{fetch(:shared_path)}/tmp/sockets")
   #command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/sockets")
-  command %(sudo mkdir drwxr-xr-x "#{fetch(:shared_path)}/tmp/pids")
+#  command %(sudo mkdir drwxr-xr-x "#{fetch(:shared_path)}/tmp/pids")
   #command %(sudo chmod g+rx,u+rwx "#{fetch(:shared_path)}/tmp/pids")
 
 
   # command %{rbenv install 2.3.0 --skip-existing}
-end
+#end
 
 desc "Deploys the current version to the server."
 task deploy: :remote_environment do
@@ -97,8 +97,8 @@ task deploy: :remote_environment do
     invoke :'deploy:cleanup'
 
     on :launch do
-      command "sudo mkdir -p #{:deploy_to}/#{:current_path}/tmp"
-      command "sudo touch #{:deploy_to}/#{:current_path}/tmp/restart.txt"
+      command " mkdir -p #{:deploy_to}/#{:current_path}/tmp"
+      command "touch #{:deploy_to}/#{:current_path}/tmp/restart.txt"
       #in_path(fetch(:current_path)) do
       #  command %(mkdir -p tmp/)
       #  command %(touch tmp/restart.txt)
