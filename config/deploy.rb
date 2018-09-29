@@ -21,11 +21,11 @@ set :repository, 'https://github.com/KhrystynaInzhuvatova/example.git'
 set :branch, 'master'
 #set :ssh_options, '-A'
 # Optional settings:
-set :user, 'root'           # Username in the server to SSH to.
+set :user, 'ubuntu'           # Username in the server to SSH to.
 #set :port, '30000'           # SSH port number.
 #set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
-
+set :execution_mode, :system
 
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
@@ -39,6 +39,7 @@ set :shared_files, fetch(:shared_files, []).push(
   'db/production.sqlite3'
 )
 
+task :switch_user do command %{sudo su - root} end
 # This task is the environment that is loaded for all remote run commands, such as
 # `mina deploy` or `mina rake`.
 task :remote_environment do
