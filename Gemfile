@@ -42,7 +42,7 @@ gem 'groupdate'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'chartkick'
-gem 'bootstrap', '~> 4.0.0'
+gem "bootstrap", ">= 4.1.2"
 gem 'rubocop', require: false
 gem 'rubocop-rspec', require: false
 gem 'whenever', require: false
