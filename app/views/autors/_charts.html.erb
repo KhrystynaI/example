@@ -1,35 +1,32 @@
-<div class="grid-x grid-margin-x">
-  <div class="small-2 small-offset-1 cell">
+<div class="container-fluid all_charts">
+  <div class="row">
+    <div class="col-md-4">
     <p>count of autors</p>
     <%= pie_chart Autor.group(:name).count,width: "300px", height: "400px", colors: ["#b00", "#666", "b007", "#670"], library: {elements: {arc: ({borderWidth: 10})}} %>
-  </div>
-  <div class="small-2 small-offset-1 cell">
+</div>
+  <div class="col-md-4">
     <p>count of articles</p>
     <%= pie_chart Article.group(:autor_id).count, width: "300px", height: "400px", colors: ["#b00", "#666", "b007", "#670"]%>
-
   </div>
-  <div class="small-2 small-offset-1 cell">
+    <div class="col-md-4">
     <p>count of comments</p>
     <%= bar_chart @autor.articles.map{|art| {name: art.title.to_s.byteslice(0..9), data: art.comments.group_by_day(:created_at).count}}, width: "500px", height: "400px", colors: ["#b00", "#666", "b007", "#670"]%>
   </div>
 </div>
-<div class="grid-x grid-margin-x">
-  <div class="small-2 small-offset-1 cell">
+<div class="row">
+  <div class="col-md-4">
     <p>when created</p>
     <%= line_chart Article.group_by_day(:created_at).count, width: "500px", height: "300px", colors: ["#b00", "#666", "b007", "#670"],prefix: "£" %>
-  </div>
-  <div class="small-2 small-offset-3 cell">
+</div>
+  <div class="col-md-4">
     <p>salary</p>
     <%= pie_chart Autor.group(:name).sum(:salary), width: "300px", height: "400px", colors: ["#b00", "#666", "b007", "#670"], library: {animation: {easing: 'easeOutQuad'}, elements: {arc: {borderWidth: 0}}} %>
+</div>
+<div class="col-md-4">
+  <div class="form-inline button_chart">
+    <%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
+    <%= link_to "download PDF", autors_charts_url(format: "pdf"), class: 'btn btn-primary'%>
   </div>
-  <div class="small-2 small-offset-3 cell" id="container">
 </div>
 </div>
-<div class="grid-x">
-  <div class="small-2 small-offset-1 cell">
-    <%= link_to 'Back', articles_path %>
-  </div>
-  <div class="small-2 small-offset-1 cell">
-    <%= link_to "download PDF", autors_charts_url(format: "pdf")%>
-  </div>
 </div>

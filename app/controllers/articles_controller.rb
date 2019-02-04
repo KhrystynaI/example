@@ -1,13 +1,24 @@
 class ArticlesController < ApplicationController
+  layout :layout
   before_action :authenticate_autor!, except: %i[index show]
-  before_action :authenticate_user!, only: [:show]
+  before_action :authenticate_user!, only: [:show, :index]
+
   def index
-    @articles = Article.when_published
+    #flash.now[:alert] = "Hello, #{current_user.user_name}"
+    @article = Article.published.order("created_at DESC").paginate(page: params[:page])
   end
 
+def index_for_autor
+  #flash.now[:alert] = "Hello, #{current_autor.autor_name}"
+  @autor = current_autor
+  @article = @autor.articles.order("created_at DESC").paginate(page: params[:page])
+  @messages = Message.last(10)
+  @message = Message.new
+end
+
   def show
-    flash.now[:alert] = 'you are '+"#{current_user.name || current_user.id}"
     @article = Article.find(params[:id])
+    @favorite_exists = Favorite.where(article: @article, user: current_user) == [] ? false : true
   end
 
   def new; end
@@ -15,7 +26,14 @@ class ArticlesController < ApplicationController
   def create
     @autor = current_autor
     @article = @autor.articles.create(article_params)
-    redirect_to autors_for_autor_path if @article.save!
+    if @article.errors.any?
+      @article.errors.full_messages.each do |error|
+        flash.now[:error] = error
+       end
+      render 'new'
+  elsif @article.save
+    redirect_to articles_index_for_autor_path
+    end
   end
 
   def edit
@@ -26,11 +44,14 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if current_autor.id == @article.autor_id
       if @article.update(article_params)
-        redirect_to articles_path
+        redirect_to articles_index_for_autor_path
       else
         render 'edit'
       end
-    else render plain: "article can change only its autor or admin"
+    else
+      #flash.now[:alert] = "article can change only its autor or admin"
+      redirect_to articles_index_for_autor_path
+
     end
   end
 
@@ -39,13 +60,29 @@ class ArticlesController < ApplicationController
     if current_autor.id == @article.autor_id
       @article.destroy
       redirect_to articles_path
-    else render plain: "article can destroy only its autor or admin"
+    #else render plain: "article can destroy only its autor or admin"
     end
+  end
+
+  def delete_upload
+  attachment = ActiveStorage::Attachment.find(params[:id])
+  attachment.purge # or use purge_later
+  redirect_back(fallback_location: edit_article_path)
   end
 
   private
 
   def article_params
-    params.require(:article).permit(:title, :body, :published_at, :published, :category_id)
+    params.require(:article).permit(:title, :body, :published_at, :status, :category_id, images: [])
   end
+
+  def layout
+   if current_user
+     "article_for_user"
+   elsif current_autor
+     "article_for_autor"
+   end
+  end
+
+
 end

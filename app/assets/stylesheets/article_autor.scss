@@ -1,0 +1,56 @@
+.new_for_autor{
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.form-inline >*{
+  margin: 5px 3px;
+}
+.datepic input{
+  width: 100%;
+  background: image-url('trin.png') right / 1.2rem no-repeat #fff;
+  height: 2.4rem;
+  border: solid 0.05rem #D8D8D8;
+  border-radius: 0.2rem;
+}
+.direct-upload {
+  display: block;
+  position: relative;
+  padding: 2px 4px;
+  margin-top: 2.5rem;
+  margin-bottom: -2rem;
+  margin-left: 0;
+  margin-right: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.direct-upload--pending {
+  opacity: 0.6;
+}
+
+.direct-upload__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.2;
+  background: #0076ff;
+  transition: width 120ms ease-out, opacity 60ms 60ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+
+.direct-upload--complete .direct-upload__progress {
+  opacity: 0.4;
+}
+
+.direct-upload--error {
+  border-color: red;
+}
+
+input[type=file][data-direct-upload-url][disabled] {
+  display: none;
+}

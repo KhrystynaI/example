@@ -1,0 +1,2009 @@
+{
+  "post_types": [
+    {
+      "id": 18,
+      "taxonomy": "post_type",
+      "description": "Окремі сторінки сайту типу \"Про клініку\", \"Контакти\" ",
+      "parent_id": 1,
+      "count": null,
+      "name": "Сторінки",
+      "slug": "page",
+      "term_group": null,
+      "term_order": null,
+      "status": null,
+      "created_at": "2018-11-19T11:08:46.948Z",
+      "updated_at": "2018-11-19T11:08:46.948Z",
+      "user_id": null,
+      "metas": [
+        {
+          "id": 21,
+          "key": "_default",
+          "value": "{\"has_category\":false,\"has_tags\":false,\"has_summary\":false,\"has_content\":true,\"has_comments\":false,\"has_picture\":true,\"has_template\":true,\"has_seo\":true,\"not_deleted\":true,\"has_layout\":true,\"default_layout\":\"\",\"icon\":\"\",\"default_template\":\"\",\"has_single_category\":false,\"has_featured\":false,\"has_parent_structure\":false,\"posts_image_dimension\":\"\",\"posts_thumb_versions\":\"\",\"posts_thumb_size\":\"\",\"is_required_picture\":false,\"contents_route_format\":\"post\",\"default_thumb\":\"\"}",
+          "objectid": 18,
+          "object_class": "PostType"
+        }
+      ],
+      "categories": [
+
+      ],
+      "post_tags": [
+
+      ],
+      "posts": [
+        {
+          "id": 3,
+          "title": "Про Клініку",
+          "slug": "about",
+          "content": "<div class=\"col-sm-12 col-lg-6\">\r\n<h4><img style=\"margin-right: 1rem; margin-left: 1rem;\" src=\"/media/1/about_us_1.jpg\" alt=\"\" width=\"402\" height=\"300\" /></h4>\r\n<h4>СоноВет - клініка ветеринарної сонографії, естетичної стоматології та офтальмології.</h4>\r\n<p>В нашій клініці Ви отримаєте висококваліфіковану вузькоспеціалізовану допомогу.</p>\r\n<p>Лікарі нашої клініки регулярно проходять стажування та приймають участь у міжнародних ветеринарних конгресах і конференціях, як в Україні так і закордоном, для поглиблення та вдосконалення своїх знань і навичок. Тому будьте певні, що в нашій клініці Ваш домашній улюбленець отримає належну професійну висококваліфіковану допомогу.</p>\r\n<p>Прийом вузького спеціаліста (лікар з ультразвукової діагностики, лікар-стоматолог, лікар-офтальмолог) проводиться за попереднім записом.</p>\r\n<p>Для консультування, загальних терапевтичних та хірургічних процедур запрошуємо в робочий час без попереднього запису.</p>\r\n<p>Також в нашій клініці Ви маєте змогу замовити ветеринарні препарати та лікувальні дієти.</p>\r\n</div>",
+          "content_filtered": "  СоноВет - клініка ветеринарної сонографії, естетичної стоматології та офтальмології. В нашій клініці Ви отримаєте висококваліфіковану вузькоспеціалізовану допомогу. Лікарі нашої клініки регулярно проходять стажування та приймають участь у міжнародних ветеринарних конгресах і конференціях, як в Україні так і закордоном, для поглиблення та вдосконалення своїх знань і навичок. Тому будьте певні, що в нашій клініці Ваш домашній улюбленець отримає належну професійну висококваліфіковану допомогу. Прийом вузького спеціаліста (лікар з ультразвукової діагностики, лікар-стоматолог, лікар-офтальмолог) проводиться за попереднім записом. Для консультування, загальних терапевтичних та хірургічних процедур запрошуємо в робочий час без попереднього запису. Також в нашій клініці Ви маєте змогу замовити ветеринарні препарати та лікувальні дієти. ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:49.289Z",
+          "updated_at": "2018-11-19T11:08:49.289Z",
+          "user_id": null,
+          "post_order": 1,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 22,
+              "key": "slug",
+              "value": "about",
+              "objectid": 3,
+              "object_class": "Post"
+            },
+            {
+              "id": 23,
+              "key": "layout",
+              "value": "",
+              "objectid": 3,
+              "object_class": "Post"
+            },
+            {
+              "id": 24,
+              "key": "thumb",
+              "value": "",
+              "objectid": 3,
+              "object_class": "Post"
+            },
+            {
+              "id": 25,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 3,
+              "object_class": "Post"
+            },
+            {
+              "id": 26,
+              "key": "visits",
+              "value": "30",
+              "objectid": 3,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Колектив",
+          "slug": "personel",
+          "content": "<div class=\"doctor-job\">\r\n<h2>Віта Володимирівна Пріцак</h2>\r\n<p>лікар ветеринарної медицини, кандидат ветеринарних наук</p>\r\n<p>Напрямки діяльності</p>\r\n<ul>\r\n<li>УЗ - діагностика</li>\r\n<li>Ехокардіографія</li>\r\n<li>Кардіологія</li>\r\n<li>Хірургія</li>\r\n<li>Терапія</li>\r\n</ul>\r\n<h2>Марта Романівна Халанія</h2>\r\n<p>лікар ветеринарної медицини</p>\r\n<p>Напрямки діяльності</p>\r\n<ul>\r\n<li>Стоматологія</li>\r\n<li>Хірургія</li>\r\n<li>Терапія</li>\r\n</ul>\r\n<h2>Олександр Вікторович Цвид</h2>\r\n<p>лікар ветеринарної медицини</p>\r\n<h2>Тетяна Романівка Сачко</h2>\r\n<p>асистент лікаря</p>\r\n<h2>Анна Олександрівна Шелудько</h2>\r\n<p>асистент лікаря</p>\r\n</div>\r\n<br />",
+          "content_filtered": " Віта Володимирівна Пріцак лікар ветеринарної медицини, кандидат ветеринарних наук Напрямки діяльності  УЗ - діагностика Ехокардіографія Кардіологія Хірургія Терапія  Марта Романівна Халанія лікар ветеринарної медицини Напрямки діяльності  Стоматологія Хірургія Терапія  Олександр Вікторович Цвид лікар ветеринарної медицини Тетяна Романівка Сачко асистент лікаря Анна Олександрівна Шелудько асистент лікаря  ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:49.982Z",
+          "updated_at": "2018-11-19T11:08:49.982Z",
+          "user_id": null,
+          "post_order": 2,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 27,
+              "key": "slug",
+              "value": "personel",
+              "objectid": 4,
+              "object_class": "Post"
+            },
+            {
+              "id": 28,
+              "key": "layout",
+              "value": "",
+              "objectid": 4,
+              "object_class": "Post"
+            },
+            {
+              "id": 29,
+              "key": "thumb",
+              "value": "",
+              "objectid": 4,
+              "object_class": "Post"
+            },
+            {
+              "id": 30,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 4,
+              "object_class": "Post"
+            },
+            {
+              "id": 31,
+              "key": "visits",
+              "value": "54",
+              "objectid": 4,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Контакти",
+          "slug": "contact",
+          "content": "<div class=\"container\">\r\n<div class=\"row\">\r\n<div class=\"col-md-4\">\r\n<h2 class=\"side-title\">КОНТАКТИ</h2>\r\n<ul class=\"list-unstyled\">\r\n<li><i class=\"fa fa-map-marker fa-2x\" aria-hidden=\"true\"> Львів</i>\r\n<p>вул. Кульпарківська, 11<br />79041 Львів, Україна</p>\r\n</li>\r\n<li><i class=\"fa fa-phone fa-2x\" aria-hidden=\"true\"></i>\r\n<p>+ 38 068-904-40-70<br />+ 38 099-777-57-30</p>\r\n</li>\r\n<li><i class=\"fa fa-envelope fa-2x\" aria-hidden=\"true\"></i>\r\n<p>sonovet.lviv@gmail.com</p>\r\n</li>\r\n<li><i class=\"fa fa-facebook-official fa-2x\" aria-hidden=\"true\"></i>\r\n<h4><a href=\"https://www.facebook.com/sonovet.lviv\" target=\"_blank\" rel=\"noopener\"> Ми у Facebook</a></h4>\r\n</li>\r\n</ul>\r\n</div>\r\n<div class=\"col-md-8\"><iframe style=\"border: 0;\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.477151086401!2d23.989653932320177!3d49.83349139347807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add87749c95b5%3A0x9fe714bf8d85d523!2z0LLRg9C70LjRhtGPINCa0YPQu9GM0L_QsNGA0LrRltCy0YHRjNC60LAsIDExLCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1531903591584\" width=\"100%\" height=\"400\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></div>\r\n</div>\r\n</div>",
+          "content_filtered": "   КОНТАКТИ   Львів вул. Кульпарківська, 1179041 Львів, Україна   + 38 068-904-40-70+ 38 099-777-57-30   sonovet.lviv@gmail.com    Ми у Facebook      ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:50.246Z",
+          "updated_at": "2018-11-19T11:08:50.246Z",
+          "user_id": null,
+          "post_order": 3,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 32,
+              "key": "slug",
+              "value": "contact",
+              "objectid": 5,
+              "object_class": "Post"
+            },
+            {
+              "id": 33,
+              "key": "layout",
+              "value": "",
+              "objectid": 5,
+              "object_class": "Post"
+            },
+            {
+              "id": 34,
+              "key": "thumb",
+              "value": "",
+              "objectid": 5,
+              "object_class": "Post"
+            },
+            {
+              "id": 35,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 5,
+              "object_class": "Post"
+            },
+            {
+              "id": 36,
+              "key": "visits",
+              "value": "61",
+              "objectid": 5,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 14,
+          "title": "test",
+          "slug": "test",
+          "content": "<p>[test test]</p>",
+          "content_filtered": "[test test]",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:43:20.156Z",
+          "updated_at": "2018-11-19T11:43:20.470Z",
+          "user_id": 1,
+          "post_order": 4,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 86,
+              "key": "slug",
+              "value": "test",
+              "objectid": 14,
+              "object_class": "Post"
+            },
+            {
+              "id": 87,
+              "key": "layout",
+              "value": "",
+              "objectid": 14,
+              "object_class": "Post"
+            },
+            {
+              "id": 88,
+              "key": "thumb",
+              "value": "",
+              "objectid": 14,
+              "object_class": "Post"
+            },
+            {
+              "id": 89,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\",\"status_default\":\"published\"}",
+              "objectid": 14,
+              "object_class": "Post"
+            },
+            {
+              "id": 93,
+              "key": "visits",
+              "value": "1",
+              "objectid": 14,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 15,
+          "title": "test",
+          "slug": "test",
+          "content": "<p>[test test]</p>",
+          "content_filtered": "[test test]",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:43:23.452Z",
+          "updated_at": "2018-11-19T11:43:23.809Z",
+          "user_id": 1,
+          "post_order": 5,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 90,
+              "key": "slug",
+              "value": "test",
+              "objectid": 15,
+              "object_class": "Post"
+            },
+            {
+              "id": 91,
+              "key": "layout",
+              "value": "",
+              "objectid": 15,
+              "object_class": "Post"
+            },
+            {
+              "id": 92,
+              "key": "thumb",
+              "value": "",
+              "objectid": 15,
+              "object_class": "Post"
+            },
+            {
+              "id": 147,
+              "key": "_default",
+              "value": "{\"status_default\":\"draft_child\"}",
+              "objectid": 15,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 16,
+          "title": "Untitled",
+          "slug": "",
+          "content": "",
+          "content_filtered": "",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:51:31.059Z",
+          "updated_at": "2018-11-19T11:53:37.679Z",
+          "user_id": 1,
+          "post_order": 6,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 94,
+              "key": "slug",
+              "value": "",
+              "objectid": 16,
+              "object_class": "Post"
+            },
+            {
+              "id": 95,
+              "key": "layout",
+              "value": "",
+              "objectid": 16,
+              "object_class": "Post"
+            },
+            {
+              "id": 96,
+              "key": "thumb",
+              "value": "",
+              "objectid": 16,
+              "object_class": "Post"
+            },
+            {
+              "id": 97,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\",\"status_default\":\"draft_child\"}",
+              "objectid": 16,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 17,
+          "title": "example",
+          "slug": "example",
+          "content": "<p>[test \"some\"]</p>\r\n<br />",
+          "content_filtered": "[test \"some\"] ",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T12:09:02.792Z",
+          "updated_at": "2018-11-19T12:20:17.665Z",
+          "user_id": 1,
+          "post_order": 7,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 100,
+              "key": "slug",
+              "value": "example",
+              "objectid": 17,
+              "object_class": "Post"
+            },
+            {
+              "id": 101,
+              "key": "layout",
+              "value": "",
+              "objectid": 17,
+              "object_class": "Post"
+            },
+            {
+              "id": 102,
+              "key": "thumb",
+              "value": "",
+              "objectid": 17,
+              "object_class": "Post"
+            },
+            {
+              "id": 103,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\",\"status_default\":\"draft_child\"}",
+              "objectid": 17,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 18,
+          "title": "Untitled",
+          "slug": "",
+          "content": "<p>[icon \"phone\"]</p>",
+          "content_filtered": "[icon \"phone\"]",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T12:23:15.843Z",
+          "updated_at": "2018-11-19T12:26:15.998Z",
+          "user_id": 1,
+          "post_order": 8,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 104,
+              "key": "slug",
+              "value": "",
+              "objectid": 18,
+              "object_class": "Post"
+            },
+            {
+              "id": 105,
+              "key": "layout",
+              "value": "",
+              "objectid": 18,
+              "object_class": "Post"
+            },
+            {
+              "id": 106,
+              "key": "thumb",
+              "value": "",
+              "objectid": 18,
+              "object_class": "Post"
+            },
+            {
+              "id": 107,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\",\"status_default\":\"draft_child\"}",
+              "objectid": 18,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 19,
+          "title": "Контакти",
+          "slug": "contact",
+          "content": "<div class=\"container\">\r\n<div class=\"row\">\r\n<div class=\"col-md-4\">\r\n<h2 class=\"side-title\">КОНТАКТИ</h2>\r\n<ul class=\"list-unstyled\">\r\n<li><i class=\"fa fa-map-marker fa-2x\" aria-hidden=\"true\"> Львів</i>\r\n<p>вул. Кульпарківська, 11<br />79041 Львів, Україна</p>\r\n</li>\r\n<li><i class=\"fa fa-phone fa-2x\" aria-hidden=\"true\"></i>\r\n<p>+ 38 068-904-40-70<br />+ 38 099-777-57-30</p>\r\n</li>\r\n<li><i class=\"fa fa-envelope fa-2x\" aria-hidden=\"true\"></i>\r\n<p>sonovet.lviv@gmail.com</p>\r\n</li>\r\n<li><i class=\"fa fa-facebook-official fa-2x\" aria-hidden=\"true\"></i>\r\n<h4><a href=\"https://www.facebook.com/sonovet.lviv\" target=\"_blank\" rel=\"noopener\"> Ми у Facebook</a></h4>\r\n</li>\r\n</ul>\r\n</div>\r\n<div class=\"col-md-8\"><iframe style=\"border: 0;\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.477151086401!2d23.989653932320177!3d49.83349139347807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add87749c95b5%3A0x9fe714bf8d85d523!2z0LLRg9C70LjRhtGPINCa0YPQu9GM0L_QsNGA0LrRltCy0YHRjNC60LAsIDExLCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1531903591584\" width=\"100%\" height=\"400\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></div>\r\n</div>\r\n</div>",
+          "content_filtered": "   КОНТАКТИ   Львів вул. Кульпарківська, 1179041 Львів, Україна   + 38 068-904-40-70+ 38 099-777-57-30   sonovet.lviv@gmail.com    Ми у Facebook      ",
+          "status": "draft_child",
+          "published_at": null,
+          "post_parent": 5,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T12:36:59.187Z",
+          "updated_at": "2018-11-19T12:56:19.504Z",
+          "user_id": 1,
+          "post_order": 9,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 108,
+              "key": "slug",
+              "value": "contact",
+              "objectid": 19,
+              "object_class": "Post"
+            },
+            {
+              "id": 109,
+              "key": "layout",
+              "value": "",
+              "objectid": 19,
+              "object_class": "Post"
+            },
+            {
+              "id": 110,
+              "key": "thumb",
+              "value": "",
+              "objectid": 19,
+              "object_class": "Post"
+            },
+            {
+              "id": 111,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\",\"draft_status\":\"draft_child\"}",
+              "objectid": 19,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 20,
+          "title": "Untitled",
+          "slug": "",
+          "content": "",
+          "content_filtered": "",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T13:03:22.158Z",
+          "updated_at": "2018-11-19T13:03:22.158Z",
+          "user_id": 1,
+          "post_order": 10,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 112,
+              "key": "slug",
+              "value": "",
+              "objectid": 20,
+              "object_class": "Post"
+            },
+            {
+              "id": 113,
+              "key": "layout",
+              "value": "",
+              "objectid": 20,
+              "object_class": "Post"
+            },
+            {
+              "id": 114,
+              "key": "thumb",
+              "value": "",
+              "objectid": 20,
+              "object_class": "Post"
+            },
+            {
+              "id": 148,
+              "key": "_default",
+              "value": "{\"status_default\":\"draft_child\"}",
+              "objectid": 20,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 21,
+          "title": "some test",
+          "slug": "test1",
+          "content": "<p>[services titles=\"1,2,3\" bodies=\"1,2,3;1,2,3;1,2,3\"]</p>",
+          "content_filtered": "[services titles=\"1,2,3\" bodies=\"1,2,3;1,2,3;1,2,3\"]",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T13:05:17.918Z",
+          "updated_at": "2018-11-19T19:00:52.516Z",
+          "user_id": 1,
+          "post_order": 11,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 115,
+              "key": "slug",
+              "value": "test1",
+              "objectid": 21,
+              "object_class": "Post"
+            },
+            {
+              "id": 116,
+              "key": "layout",
+              "value": "",
+              "objectid": 21,
+              "object_class": "Post"
+            },
+            {
+              "id": 117,
+              "key": "thumb",
+              "value": "",
+              "objectid": 21,
+              "object_class": "Post"
+            },
+            {
+              "id": 118,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\",\"status_default\":\"published\"}",
+              "objectid": 21,
+              "object_class": "Post"
+            },
+            {
+              "id": 119,
+              "key": "visits",
+              "value": "35",
+              "objectid": 21,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 22,
+          "title": "some test",
+          "slug": "test1",
+          "content": "<p>[services titles=\"1,2,3\" bodies=\"1,2,3;1,2,3;1,2,3\"]</p>",
+          "content_filtered": "[services titles=\"1,2,3\" bodies=\"1,2,3;1,2,3;1,2,3\"]",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": 21,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T13:06:23.205Z",
+          "updated_at": "2018-11-19T19:00:55.091Z",
+          "user_id": 1,
+          "post_order": 12,
+          "taxonomy_id": 18,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 120,
+              "key": "slug",
+              "value": "test1",
+              "objectid": 22,
+              "object_class": "Post"
+            },
+            {
+              "id": 121,
+              "key": "layout",
+              "value": "",
+              "objectid": 22,
+              "object_class": "Post"
+            },
+            {
+              "id": 122,
+              "key": "thumb",
+              "value": "",
+              "objectid": 22,
+              "object_class": "Post"
+            },
+            {
+              "id": 123,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\",\"draft_status\":\"draft_child\",\"status_default\":\"draft_child\"}",
+              "objectid": 22,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        }
+      ],
+      "custom_field_groups": [
+
+      ],
+      "field_values": [
+
+      ]
+    },
+    {
+      "id": 19,
+      "taxonomy": "post_type",
+      "description": "Новини клініки СоноВет",
+      "parent_id": 1,
+      "count": null,
+      "name": "Новини",
+      "slug": "news",
+      "term_group": null,
+      "term_order": null,
+      "status": null,
+      "created_at": "2018-11-19T11:08:50.598Z",
+      "updated_at": "2018-11-19T11:08:50.598Z",
+      "user_id": null,
+      "metas": [
+        {
+          "id": 38,
+          "key": "_default",
+          "value": "{\"has_category\":false,\"has_tags\":true,\"has_summary\":true,\"has_content\":true,\"has_comments\":true,\"has_picture\":true,\"has_template\":true,\"has_seo\":true,\"not_deleted\":true,\"has_layout\":false,\"default_layout\":\"\",\"icon\":\"\",\"default_template\":\"\",\"has_single_category\":false,\"has_featured\":false,\"has_parent_structure\":false,\"posts_image_dimension\":\"\",\"posts_thumb_versions\":\"\",\"posts_thumb_size\":\"\",\"is_required_picture\":false,\"contents_route_format\":\"post\",\"default_thumb\":\"\"}",
+          "objectid": 19,
+          "object_class": "PostType"
+        }
+      ],
+      "categories": [
+        {
+          "id": 20,
+          "taxonomy": "category",
+          "description": null,
+          "parent_id": 19,
+          "count": null,
+          "name": "Uncategorized",
+          "slug": "uncategorized",
+          "term_group": 1,
+          "term_order": null,
+          "status": "19",
+          "created_at": "2018-11-19T11:08:52.712Z",
+          "updated_at": "2018-11-19T11:08:52.712Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "get_field_groups": [
+
+          ],
+          "field_values": [
+
+          ]
+        }
+      ],
+      "post_tags": [
+
+      ],
+      "posts": [
+        {
+          "id": 6,
+          "title": "Онлайн-запис на прийом",
+          "slug": "onlayn-zapis-na-priyom",
+          "content": "<p><img src=\"/media/1/1417920.jpg\" alt=\"\" width=\"640\" height=\"360\" /></p>\r\n<p>Відтепер Ви можете записатись на прийом до ветлікаря швидко і зручно.</p>\r\n<p>З будь-якого мобільного телефону чи комп'ютера Ви можете надіслати запит на прийом і Вам перетелефонують для уточнення часу прийому.</p>",
+          "content_filtered": " Відтепер Ви можете записатись на прийом до ветлікаря швидко і зручно. З будь-якого мобільного телефону чи комп'ютера Ви можете надіслати запит на прийом і Вам перетелефонують для уточнення часу прийому.",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:52.802Z",
+          "updated_at": "2018-11-19T11:08:52.802Z",
+          "user_id": null,
+          "post_order": 1,
+          "taxonomy_id": 19,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 39,
+              "key": "slug",
+              "value": "onlayn-zapis-na-priyom",
+              "objectid": 6,
+              "object_class": "Post"
+            },
+            {
+              "id": 40,
+              "key": "summary",
+              "value": "",
+              "objectid": 6,
+              "object_class": "Post"
+            },
+            {
+              "id": 41,
+              "key": "has_comments",
+              "value": "1",
+              "objectid": 6,
+              "object_class": "Post"
+            },
+            {
+              "id": 42,
+              "key": "thumb",
+              "value": "",
+              "objectid": 6,
+              "object_class": "Post"
+            },
+            {
+              "id": 43,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 6,
+              "object_class": "Post"
+            },
+            {
+              "id": 44,
+              "key": "visits",
+              "value": "10",
+              "objectid": 6,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Догляд за зубами у собак",
+          "slug": "doglyad-za-zubami",
+          "content": "<div class=\"w-100\"><img class=\"rounded float-left mr-3\" style=\"margin: 5px;\" src=\"/media/1/teeth_brushing_body_image.jpg\" alt=\"\" width=\"600\" height=\"400\" /></div>\r\n<div class=\"meta text-left\" style=\"margin-bottom: 16px; text-align: left;\"><strong><em>Правильний догляд за зубами вашого домашнього улюбленця - запорука його здоров'я&nbsp;!</em></strong></div>\r\n<div class=\"meta text-left\" style=\"margin-bottom: 16px; text-align: left;\">\r\n<p>Раніше мало хто замислювався над гігієною ротової порожнини своїх чотирилапих друзів. Та й зараз не кожен з власників тварин &laquo;заглядає в ротову порожнину&raquo; своєї собаки, хоча це є дуже важливо. Бо своєчасно діагностовану патологію зубів можна вирішити простим лікуванням із збереженням зуба. Ще не так давно при патологіях зубів їх просто видаляли, мотивуючи це тим, що у собак і так достатньо зубів, а естетичний вигляд не так важливий. Та ветеринарна стоматологія впевнено розвивається і вдосконалюється, і фактично крокує нога в ногу з медичною стоматологією. Зараз ветеринарна стоматологія пропонує безліч послуг для власників тварин починаючи від звичайної гігієни ротової порожнини до <em>імплантації зубів. </em></p>\r\n<p style=\"text-align: left;\"><em>Сьогодні важливим процесом для власників чотирилапих є гігієна ротової порожнини як в домашніх умовах так і в умовах ветеринарної клініки. </em></p>\r\n<p style=\"text-align: left;\">Правильна гігієна ротової порожнини собаки, контроль стану зубів і запобігання утворенню зубного каменю, це дуже важливі елементи по догляду домашніх тварин, які дають можливість запобігти багатьом захворюванням. Догляд за зубами потрібно розпочинати вже від цуценяти, поступово привчаючи малечу до того, аби часто заглядати і проводити різного роду маніпуляції в ротовій порожнині. Тварина має до цього звикнути, це має стати чимось буденним, як прийом корму чи прогулянка, але без насильства над самою твариною.</p>\r\n<p style=\"text-align: left;\">Щоб привчити цуценя до гігієни ротової порожнини, нам необхідно пройти декілька етапів:</p>\r\n<p style=\"text-align: left;\">- привчити цуценя до простого дотику рукою до морди, зубів, а також піднімання губ;</p>\r\n<p style=\"text-align: left;\">- привчити цуценя до запаху зубної пасти, різних спреїв чи гелів по догляду за зубами тварин;</p>\r\n<p style=\"text-align: left;\">- коли цуценя понюхає або зацікавиться зубною пастою його потрібно похвалити або винагородити смаколиком;</p>\r\n<p style=\"text-align: left;\">- якщо наші попередні дії не завдають тварині дискомфорту ми можемо перейти до наступного етапу, а саме накласти невелику кількість зубної пасти на палець та обережно піднімаючи верхню губу нанести її на поверхню зубів (спочатку на різці та ікла). Коли ж тварина вже призвичаїться до ваших дій і буде дозволяти проводити дані маніпуляції, зубну пасту можна наносити, і на інші зуби - премоляри та моляри.</p>\r\n<p style=\"text-align: left;\"><img class=\"rounded float-right\" src=\"/media/1/zubnye-shetki-dlja-sobak2.jpg\" alt=\"\" width=\"400\" height=\"197\" />Слід пам&rsquo;ятати, що ваші дії мають бути поступовими, без застосування сили, з кожним днем збільшуючи залучену в процедуру кількість зубів. Спробуйте виконати дані маніпуляції у формі гри, без примусу тварини до цього. Проводьте дані процедури щодня, щоб тварина звикла до них. Коли вона остаточно звикне до ваших маніпуляцій, можна перейти до наступного етапу - застосування спеціальних зубних щіточок для тварин. Головне при чищенні зубів не травмувати зубну емаль та ясна.</p>\r\n<p style=\"text-align: left;\">Та потрібно бути обережним, занадто довге проведення процедури у цеценяти може викликати зворотній ефект і наступного разу він не дасть можливості Вам провести дані маніпуляції. Після кожної процедури потрібно хвалити собаку.</p>\r\n<p style=\"text-align: left;\">З часом Ви можете поступово збільшувати час чищення зубів, не забуваючи про те, що чищення зубів потрібно завершувати коли цуценя є спокійне і розслаблене.</p>\r\n<p style=\"text-align: left;\">Привчити дорослу тварину до даної процедури буде набагато важче, так як в її звичайний ритм ми намагаємось додати щось нове, чого вона не знає і не розуміє. Це звичайно можливо та буде вимагати від Вас більше зусиль і часу. Ось чому важливо привчати до гігієни ротової порожнини ще від маленького.</p>\r\n<p style=\"text-align: left;\">На сьогоднішній день окрім зубних паст є безліч різноманітних спреїв та гелів по догляду за зубами тварин. Регулярне застосування яких зменшить кількість візитів з Вашим чотирилапим другом до ветеринарного лікаря.</p>\r\n<p style=\"text-align: left;\">Сьогодні власники тварин дуже часто звертаються у ветеринарні клініки з проблемою неприємного запаху з ротової порожнини, наявністю зубного каменю та випадіння зубів. Фактично причиною в більшості випадків проблем із зубами є утворення зубного каменю. Зубний наліт - накопичення бактерій і продуктів їх життєдіяльності, що локалізовані на поверхні зуба. Довготривалий наліт, поступово кальцифікується, перетворюючись на твердий субстрат, який називають зубним каменем. До утворення зубного каменю більш схильні малі породи собак, такі як йоркширські тер&rsquo;єри, чі-хуа-хуа, той-тер&rsquo;єри, шпіци, ши-тцу, французькі бульдоги, спаніелі, в той час як у великих порід, таких як німецькі вівчарки, лабрадори, хаскі, боксери це спостерігається не так часто.</p>\r\n<p style=\"text-align: left;\">Зубний камінь може бути надясневим і підясневим. Саме збільшення останнього викликає відшаровування краю ясен від кореня зуба, поступово руйнує <span>з</span>&rsquo;<span>єднання </span><em>зуба</em><span> з кістковою тканиною </span><em>зубної</em><span> альвеоли</span>. Такий стан провокує запалення ясен, проникнення інфекції в зубну альвеолу і, відповідно, викликає запалення тканин, які оточують зуб.</p>\r\n<p><img class=\"rounded float-left\" src=\"/media/1/Зуб.jpg\" alt=\"\" width=\"500\" height=\"517\" /></p>\r\n</div>\r\n<p style=\"text-align: left;\">В таких випадках, коли Ви бачите зубний камінь у вашого домашнього улюбленця, необхідно звернутися до ветеринарного лікаря для проведення санації ротової порожнини в умовах ветеринарної клініки. Санація ротової порожнини включає в себе загальний огляд тварини, анестезіологічне обстеження пацієнта, видалення зубного каменю ультразвуковим скалером, <span>пародонтологічне </span><em>зондування</em><span> в цілях визначення глибини пародонтальних </span><em>кишень</em><span> і стану </span><em>піддесневої</em><span> зони, екстракція (видалення) нежиттєздатних зубів та полірування емалі. Останній етап дуже важливий, оскільки після зняття зубного каменю на поверхні емалі утворюються мікротріщини і</span> шорсткості, які спричиняють швидке прикріплення залишків корму та формування острівців зубного нальоту і каменю. На гладкій, вже відполірованій спеціальними пастами поверхні, зубний наліт практично не затримується.</p>\r\n<p style=\"text-align: left;\">Дана процедура проводиться тільки під загальним наркозом, якого не слід боятися. Саме тому, перед процедурою проводиться загальний огляд та анестезіологічне обстеження пацієнта, щоб індивідуально підібрати вид наркозу саме для вашого улюбленця. Дехто може сказати, що наркоз це погано, але з іншої сторони зуби в занедбаному стані нічого доброго не пророкують. Кожен вид наркозу само собою може нести певну небезпеку, так як кожен організм особливий, саме тому є лікар-анестезіолог, який слідкує в процесі проведення процедури за станом тварини і в будь-який момент зможе надати необхідну допомогу. Та поміркуйте самі, проведення такої процедури без наркозу, це ще більша травма для тварини, що в першу чергу несе &nbsp;небезпеку для ветеринарного лікаря, який буде проводити процедуру, для самої тварини, яка в подальшому буде роздратованою та може завдати собі шкоди. Думаю всі Ви хоча б раз були в стоматолога на аналогічній процедурі, і знаєте, яка вона є неприємна, але ж &nbsp;людина це терпить, а подумайте як це тварині терпіти з відкритим ротом мінімум 30 хв. І найвагоміший аргумент, щоб Вас переконати, тільки коли тварина в наркозі ветеринарний лікар може інтубувати тварину - встановити ендотрахеальну трубки в гортань і трахею, не тільки для зниження ризику занесення зубних відкладень в дихальні шляхи тварини, але й при необхідності для проведення реанімаційних заходів.</p>\r\n<p style=\"text-align: left;\">Тому, не забувайте частіше &laquo;заглядати&raquo; в ротову порожнину ваших домашніх улюбленців, слідкувати за її загальним станом, виявляти наявність зубного каменю та своєчасно звертатися до ветеринарного лікаря.</p>\r\n<p style=\"text-align: left;\"><img style=\"float: left;\" src=\"/media/1/blog_0217_01.jpg\" alt=\"\" /></p>",
+          "content_filtered": " Правильний догляд за зубами вашого домашнього улюбленця - запорука його здоров'я !  Раніше мало хто замислювався над гігієною ротової порожнини своїх чотирилапих друзів. Та й зараз не кожен з власників тварин «заглядає в ротову порожнину» своєї собаки, хоча це є дуже важливо. Бо своєчасно діагностовану патологію зубів можна вирішити простим лікуванням із збереженням зуба. Ще не так давно при патологіях зубів їх просто видаляли, мотивуючи це тим, що у собак і так достатньо зубів, а естетичний вигляд не так важливий. Та ветеринарна стоматологія впевнено розвивається і вдосконалюється, і фактично крокує нога в ногу з медичною стоматологією. Зараз ветеринарна стоматологія пропонує безліч послуг для власників тварин починаючи від звичайної гігієни ротової порожнини до імплантації зубів.  Сьогодні важливим процесом для власників чотирилапих є гігієна ротової порожнини як в домашніх умовах так і в умовах ветеринарної клініки.  Правильна гігієна ротової порожнини собаки, контроль стану зубів і запобігання утворенню зубного каменю, це дуже важливі елементи по догляду домашніх тварин, які дають можливість запобігти багатьом захворюванням. Догляд за зубами потрібно розпочинати вже від цуценяти, поступово привчаючи малечу до того, аби часто заглядати і проводити різного роду маніпуляції в ротовій порожнині. Тварина має до цього звикнути, це має стати чимось буденним, як прийом корму чи прогулянка, але без насильства над самою твариною. Щоб привчити цуценя до гігієни ротової порожнини, нам необхідно пройти декілька етапів: - привчити цуценя до простого дотику рукою до морди, зубів, а також піднімання губ; - привчити цуценя до запаху зубної пасти, різних спреїв чи гелів по догляду за зубами тварин; - коли цуценя понюхає або зацікавиться зубною пастою його потрібно похвалити або винагородити смаколиком; - якщо наші попередні дії не завдають тварині дискомфорту ми можемо перейти до наступного етапу, а саме накласти невелику кількість зубної пасти на палець та обережно піднімаючи верхню губу нанести її на поверхню зубів (спочатку на різці та ікла). Коли ж тварина вже призвичаїться до ваших дій і буде дозволяти проводити дані маніпуляції, зубну пасту можна наносити, і на інші зуби - премоляри та моляри. Слід пам’ятати, що ваші дії мають бути поступовими, без застосування сили, з кожним днем збільшуючи залучену в процедуру кількість зубів. Спробуйте виконати дані маніпуляції у формі гри, без примусу тварини до цього. Проводьте дані процедури щодня, щоб тварина звикла до них. Коли вона остаточно звикне до ваших маніпуляцій, можна перейти до наступного етапу - застосування спеціальних зубних щіточок для тварин. Головне при чищенні зубів не травмувати зубну емаль та ясна. Та потрібно бути обережним, занадто довге проведення процедури у цеценяти може викликати зворотній ефект і наступного разу він не дасть можливості Вам провести дані маніпуляції. Після кожної процедури потрібно хвалити собаку. З часом Ви можете поступово збільшувати час чищення зубів, не забуваючи про те, що чищення зубів потрібно завершувати коли цуценя є спокійне і розслаблене. Привчити дорослу тварину до даної процедури буде набагато важче, так як в її звичайний ритм ми намагаємось додати щось нове, чого вона не знає і не розуміє. Це звичайно можливо та буде вимагати від Вас більше зусиль і часу. Ось чому важливо привчати до гігієни ротової порожнини ще від маленького. На сьогоднішній день окрім зубних паст є безліч різноманітних спреїв та гелів по догляду за зубами тварин. Регулярне застосування яких зменшить кількість візитів з Вашим чотирилапим другом до ветеринарного лікаря. Сьогодні власники тварин дуже часто звертаються у ветеринарні клініки з проблемою неприємного запаху з ротової порожнини, наявністю зубного каменю та випадіння зубів. Фактично причиною в більшості випадків проблем із зубами є утворення зубного каменю. Зубний наліт - накопичення бактерій і продуктів їх життєдіяльності, що локалізовані на поверхні зуба. Довготривалий наліт, поступово кальцифікується, перетворюючись на твердий субстрат, який називають зубним каменем. До утворення зубного каменю більш схильні малі породи собак, такі як йоркширські тер’єри, чі-хуа-хуа, той-тер’єри, шпіци, ши-тцу, французькі бульдоги, спаніелі, в той час як у великих порід, таких як німецькі вівчарки, лабрадори, хаскі, боксери це спостерігається не так часто. Зубний камінь може бути надясневим і підясневим. Саме збільшення останнього викликає відшаровування краю ясен від кореня зуба, поступово руйнує з’єднання зуба з кістковою тканиною зубної альвеоли. Такий стан провокує запалення ясен, проникнення інфекції в зубну альвеолу і, відповідно, викликає запалення тканин, які оточують зуб.   В таких випадках, коли Ви бачите зубний камінь у вашого домашнього улюбленця, необхідно звернутися до ветеринарного лікаря для проведення санації ротової порожнини в умовах ветеринарної клініки. Санація ротової порожнини включає в себе загальний огляд тварини, анестезіологічне обстеження пацієнта, видалення зубного каменю ультразвуковим скалером, пародонтологічне зондування в цілях визначення глибини пародонтальних кишень і стану піддесневої зони, екстракція (видалення) нежиттєздатних зубів та полірування емалі. Останній етап дуже важливий, оскільки після зняття зубного каменю на поверхні емалі утворюються мікротріщини і шорсткості, які спричиняють швидке прикріплення залишків корму та формування острівців зубного нальоту і каменю. На гладкій, вже відполірованій спеціальними пастами поверхні, зубний наліт практично не затримується. Дана процедура проводиться тільки під загальним наркозом, якого не слід боятися. Саме тому, перед процедурою проводиться загальний огляд та анестезіологічне обстеження пацієнта, щоб індивідуально підібрати вид наркозу саме для вашого улюбленця. Дехто може сказати, що наркоз це погано, але з іншої сторони зуби в занедбаному стані нічого доброго не пророкують. Кожен вид наркозу само собою може нести певну небезпеку, так як кожен організм особливий, саме тому є лікар-анестезіолог, який слідкує в процесі проведення процедури за станом тварини і в будь-який момент зможе надати необхідну допомогу. Та поміркуйте самі, проведення такої процедури без наркозу, це ще більша травма для тварини, що в першу чергу несе  небезпеку для ветеринарного лікаря, який буде проводити процедуру, для самої тварини, яка в подальшому буде роздратованою та може завдати собі шкоди. Думаю всі Ви хоча б раз були в стоматолога на аналогічній процедурі, і знаєте, яка вона є неприємна, але ж  людина це терпить, а подумайте як це тварині терпіти з відкритим ротом мінімум 30 хв. І найвагоміший аргумент, щоб Вас переконати, тільки коли тварина в наркозі ветеринарний лікар може інтубувати тварину - встановити ендотрахеальну трубки в гортань і трахею, не тільки для зниження ризику занесення зубних відкладень в дихальні шляхи тварини, але й при необхідності для проведення реанімаційних заходів. Тому, не забувайте частіше «заглядати» в ротову порожнину ваших домашніх улюбленців, слідкувати за її загальним станом, виявляти наявність зубного каменю та своєчасно звертатися до ветеринарного лікаря. ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:53.215Z",
+          "updated_at": "2018-11-19T11:08:53.215Z",
+          "user_id": null,
+          "post_order": 2,
+          "taxonomy_id": 19,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 45,
+              "key": "slug",
+              "value": "doglyad-za-zubami",
+              "objectid": 7,
+              "object_class": "Post"
+            },
+            {
+              "id": 46,
+              "key": "summary",
+              "value": "",
+              "objectid": 7,
+              "object_class": "Post"
+            },
+            {
+              "id": 47,
+              "key": "has_comments",
+              "value": "1",
+              "objectid": 7,
+              "object_class": "Post"
+            },
+            {
+              "id": 48,
+              "key": "thumb",
+              "value": "/media/1/teeth_brushing_body_image.jpg",
+              "objectid": 7,
+              "object_class": "Post"
+            },
+            {
+              "id": 49,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 7,
+              "object_class": "Post"
+            },
+            {
+              "id": 50,
+              "key": "visits",
+              "value": "23",
+              "objectid": 7,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+            {
+              "id": 6,
+              "name": "Uncategorized",
+              "slug": "uncategorized"
+            }
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 23,
+          "title": "news4",
+          "slug": "news4",
+          "content": "<h1 class=\"post_news__title\">Очільника МВС часів Януковича підозрюють у відмиванні 10 мільярдів гривень</h1>\r\n<div class=\"post__statistic\">\r\n<div class=\"post__views\">729 ПЕРЕГЛЯДІВ</div>\r\n<span>&nbsp;</span>\r\n<div class=\"post__comments\"><a href=\"https://www.pravda.com.ua/news/2018/11/19/7198700/#comments\"><span class=\"fb-comments-count\" data-href=\"https://www.pravda.com.ua/news/2018/11/19/7198700/\"></span></a></div>\r\n</div>\r\n<div class=\"post_news__date\">Понеділок, 19 листопада 2018, 19:18</div>\r\n<div class=\"post__social-container\">\r\n<div class=\"post__social\"><a href=\"https://www.pravda.com.ua/news/2018/11/19/7198700/\" onclick=\"fb_share(); return false;\" class=\"post__social__item footer-info__social__item_fb\"><span class=\"footer-info__social__item_icon\"></span><span class=\"footer-info__social__item_follows\">0</span></a><a href=\"https://plus.google.com/share?url=https://www.pravda.com.ua/news/2018/11/19/7198700/\" onclick=\"window.open(this.href, 'gplus', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;\" class=\"post__social__item footer-info__social__item_gplus\"><span class=\"footer-info__social__item_icon\"></span><span class=\"footer-info__social__item_follows\">0</span></a><a href=\"https://www.pravda.com.ua/news/2018/11/19/7198700/\" onclick=\"tw_share(); return false;\" class=\"post__social__item footer-info__social__item_twitter\"><span class=\"footer-info__social__item_icon\"></span><span class=\"footer-info__social__item_follows\">0</span></a>\r\n<div class=\"unit_button-banner\">\r\n<div id=\"adnet_8bxulkle5tb1l9b2\"></div>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"post_news__text\" data-io-article-url=\"https://www.pravda.com.ua/news/2018/11/19/7198700/\">\r\n<p>Колишній голова Міністерства внутрішніх справ України часів президентства Віктора Януковича Віталій Захарченко підозрюється у відмиванні близько 10,34 мільярдів гривень через Смартбанк.</p>\r\n<p>Про це йдеться у постанові Печерського суду Києва, який надав доступ Генеральній прокуратурі до документів Смартбанку, повідомляє<span>&nbsp;</span><a href=\"http://ua.interfax.com.ua/\" target=\"_blank\" rel=\"noopener\">\"Інтерфакс-Україна\"</a>. &nbsp;</p>\r\n</div>",
+          "content_filtered": "Очільника МВС часів Януковича підозрюють у відмиванні 10 мільярдів гривень  729 ПЕРЕГЛЯДІВ     Понеділок, 19 листопада 2018, 19:18  000       Колишній голова Міністерства внутрішніх справ України часів президентства Віктора Януковича Віталій Захарченко підозрюється у відмиванні близько 10,34 мільярдів гривень через Смартбанк. Про це йдеться у постанові Печерського суду Києва, який надав доступ Генеральній прокуратурі до документів Смартбанку, повідомляє \"Інтерфакс-Україна\".   ",
+          "status": "trash",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T17:28:42.984Z",
+          "updated_at": "2018-11-19T17:31:40.831Z",
+          "user_id": 1,
+          "post_order": 3,
+          "taxonomy_id": 19,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 124,
+              "key": "slug",
+              "value": "news4",
+              "objectid": 23,
+              "object_class": "Post"
+            },
+            {
+              "id": 125,
+              "key": "summary",
+              "value": "",
+              "objectid": 23,
+              "object_class": "Post"
+            },
+            {
+              "id": 126,
+              "key": "has_comments",
+              "value": "1",
+              "objectid": 23,
+              "object_class": "Post"
+            },
+            {
+              "id": 127,
+              "key": "thumb",
+              "value": "",
+              "objectid": 23,
+              "object_class": "Post"
+            },
+            {
+              "id": 128,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\",\"status_default\":\"published\"}",
+              "objectid": 23,
+              "object_class": "Post"
+            },
+            {
+              "id": 133,
+              "key": "visits",
+              "value": "2",
+              "objectid": 23,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 24,
+          "title": "news4",
+          "slug": "news4",
+          "content": "<div class=\"meta text-left\" style=\"text-align: right;\" data-mce-style=\"text-align: right;\"><span style=\"background-color: rgb(0, 255, 0);\" data-mce-style=\"background-color: #00ff00;\">Правильний догляд за зубами вашого домашнього улюбленця - запорука його здоров'я&nbsp;!</span></div><div class=\"meta text-left\"><p style=\"text-align: right;\" data-mce-style=\"text-align: right;\"><span style=\"background-color: rgb(0, 255, 0);\" data-mce-style=\"background-color: #00ff00;\">Раніше мало хто замислювався над гігієною ротової порожнини своїх чотирилапих друзів. Та й зараз не кожен з власників тварин «заглядає в ротову порожнину» своєї собаки, хоча це є дуже важливо. Бо своєчасно діагностовану патологію зубів можна вирішити простим лікуванням із збереженням зуба. Ще не так давно при патологіях зубів їх просто видаляли, мотивуючи це тим, що у собак і так достатньо зубів, а естетичний вигляд не так важливий. Та ветеринарна стоматологія впевнено розвивається і вдосконалюється, і фактично крокує нога в ногу з медичною стоматологією. Зараз ветеринарна стоматологія пропонує безліч послуг для власників тварин починаючи від звичайної гігієни ротової порожнини до&nbsp;імплантації зубів.</span></p><p style=\"text-align: right;\" data-mce-style=\"text-align: right;\"><span style=\"background-color: rgb(0, 255, 0);\" data-mce-style=\"background-color: #00ff00;\">Сьогодні важливим процесом для власників чотирилапих є гігієна ротової порожнини як в домашніх умовах так і в умовах ветеринарної клініки.</span></p></div>",
+          "content_filtered": "Правильний догляд за зубами вашого домашнього улюбленця - запорука його здоров'я !Раніше мало хто замислювався над гігієною ротової порожнини своїх чотирилапих друзів. Та й зараз не кожен з власників тварин «заглядає в ротову порожнину» своєї собаки, хоча це є дуже важливо. Бо своєчасно діагностовану патологію зубів можна вирішити простим лікуванням із збереженням зуба. Ще не так давно при патологіях зубів їх просто видаляли, мотивуючи це тим, що у собак і так достатньо зубів, а естетичний вигляд не так важливий. Та ветеринарна стоматологія впевнено розвивається і вдосконалюється, і фактично крокує нога в ногу з медичною стоматологією. Зараз ветеринарна стоматологія пропонує безліч послуг для власників тварин починаючи від звичайної гігієни ротової порожнини до імплантації зубів.Сьогодні важливим процесом для власників чотирилапих є гігієна ротової порожнини як в домашніх умовах так і в умовах ветеринарної клініки.",
+          "status": "draft_child",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T17:28:45.909Z",
+          "updated_at": "2018-11-19T17:28:45.909Z",
+          "user_id": 1,
+          "post_order": 4,
+          "taxonomy_id": 19,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 129,
+              "key": "slug",
+              "value": "news4",
+              "objectid": 24,
+              "object_class": "Post"
+            },
+            {
+              "id": 130,
+              "key": "summary",
+              "value": "",
+              "objectid": 24,
+              "object_class": "Post"
+            },
+            {
+              "id": 131,
+              "key": "has_comments",
+              "value": "1",
+              "objectid": 24,
+              "object_class": "Post"
+            },
+            {
+              "id": 132,
+              "key": "thumb",
+              "value": "",
+              "objectid": 24,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        }
+      ],
+      "custom_field_groups": [
+
+      ],
+      "field_values": [
+
+      ]
+    },
+    {
+      "id": 21,
+      "taxonomy": "post_type",
+      "description": "Сторінки із описами кожної послуги клініки.",
+      "parent_id": 1,
+      "count": null,
+      "name": "Послуги",
+      "slug": "services",
+      "term_group": null,
+      "term_order": null,
+      "status": null,
+      "created_at": "2018-11-19T11:08:53.725Z",
+      "updated_at": "2018-11-19T11:08:53.725Z",
+      "user_id": null,
+      "metas": [
+        {
+          "id": 52,
+          "key": "_default",
+          "value": "{\"has_category\":false,\"has_tags\":false,\"has_summary\":true,\"has_content\":true,\"has_comments\":false,\"has_picture\":true,\"has_template\":true,\"has_seo\":true,\"not_deleted\":false,\"has_layout\":false,\"default_layout\":\"\",\"icon\":\"\",\"default_template\":\"\",\"has_single_category\":false,\"has_featured\":false,\"has_parent_structure\":false,\"posts_image_dimension\":\"\",\"posts_thumb_versions\":\"\",\"posts_thumb_size\":\"\",\"is_required_picture\":false,\"contents_route_format\":\"post\",\"default_thumb\":\"\"}",
+          "objectid": 21,
+          "object_class": "PostType"
+        }
+      ],
+      "categories": [
+        {
+          "id": 22,
+          "taxonomy": "category",
+          "description": null,
+          "parent_id": 21,
+          "count": 1,
+          "name": "Uncategorized",
+          "slug": "uncategorized",
+          "term_group": 1,
+          "term_order": null,
+          "status": "21",
+          "created_at": "2018-11-19T11:08:55.773Z",
+          "updated_at": "2018-11-19T11:08:55.773Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "get_field_groups": [
+
+          ],
+          "field_values": [
+
+          ]
+        }
+      ],
+      "post_tags": [
+
+      ],
+      "posts": [
+        {
+          "id": 8,
+          "title": "УЗД",
+          "slug": "uzd",
+          "content": "<ul>\r\n<li>ехокардіографія (ЕХО-КГ серця)</li>\r\n<li>внутрішніх органів</li>\r\n<li>вагітності</li>\r\n<li>м&rsquo;яких тканин</li>\r\n<li>молочної залози</li>\r\n<li>новоутворень</li>\r\n<li>суглобів</li>\r\n<li>ока та перибульбарного простору</li>\r\n<li>біопсія під контролем УЗ</li>\r\n</ul>",
+          "content_filtered": " ехокардіографія (ЕХО-КГ серця) внутрішніх органів вагітності м’яких тканин молочної залози новоутворень суглобів ока та перибульбарного простору біопсія під контролем УЗ ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:55.864Z",
+          "updated_at": "2018-11-19T11:08:55.864Z",
+          "user_id": null,
+          "post_order": 1,
+          "taxonomy_id": 21,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 53,
+              "key": "slug",
+              "value": "uzd",
+              "objectid": 8,
+              "object_class": "Post"
+            },
+            {
+              "id": 54,
+              "key": "summary",
+              "value": "",
+              "objectid": 8,
+              "object_class": "Post"
+            },
+            {
+              "id": 55,
+              "key": "thumb",
+              "value": "/media/1/uzd.jpg",
+              "objectid": 8,
+              "object_class": "Post"
+            },
+            {
+              "id": 56,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 8,
+              "object_class": "Post"
+            },
+            {
+              "id": 57,
+              "key": "visits",
+              "value": "9",
+              "objectid": 8,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 9,
+          "title": "СТОМАТОЛОГІЯ",
+          "slug": "service_stomach",
+          "content": "<ul>\r\n<li>лікування зубів у собак та котів</li>\r\n<li>ультразвукове зняття зубних відкладень з поліруванням емалі</li>\r\n<li>видалення тимчасових та постійних зубів</li>\r\n<li>корекція прикусу</li>\r\n<li>пломбування зубів та естетична реставрація</li>\r\n<li>лікування кореневих каналів</li>\r\n<li>складання індивідуальної стоматологічної карти</li>\r\n</ul>\r\n<br />\r\n<p>Тестова сторінка послуг стоматології</p>",
+          "content_filtered": " лікування зубів у собак та котів ультразвукове зняття зубних відкладень з поліруванням емалі видалення тимчасових та постійних зубів корекція прикусу пломбування зубів та естетична реставрація лікування кореневих каналів складання індивідуальної стоматологічної карти   Тестова сторінка послуг стоматології",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:56.116Z",
+          "updated_at": "2018-11-19T11:08:56.116Z",
+          "user_id": null,
+          "post_order": 2,
+          "taxonomy_id": 21,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 58,
+              "key": "slug",
+              "value": "service_stomach",
+              "objectid": 9,
+              "object_class": "Post"
+            },
+            {
+              "id": 59,
+              "key": "summary",
+              "value": "",
+              "objectid": 9,
+              "object_class": "Post"
+            },
+            {
+              "id": 60,
+              "key": "thumb",
+              "value": "/media/1/stomach.jpg",
+              "objectid": 9,
+              "object_class": "Post"
+            },
+            {
+              "id": 61,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 9,
+              "object_class": "Post"
+            },
+            {
+              "id": 62,
+              "key": "visits",
+              "value": "6",
+              "objectid": 9,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 10,
+          "title": "ОФТАЛЬМОЛОГІЯ",
+          "slug": "ophthalmology",
+          "content": "<ul>\r\n<li>діагностика вад зору</li>\r\n<li>дослідження очного дна</li>\r\n<li>вимірювання очного тиску</li>\r\n<li>відновлення прохідності носослізного каналу</li>\r\n<li>лікування кератитів, кон&rsquo;юнктивітів, глаукоми, катаракти</li>\r\n<li>блефаропластика</li>\r\n<li>дослідження та лікування синдрому &laquo;сухого ока&raquo;</li>\r\n</ul>",
+          "content_filtered": " діагностика вад зору дослідження очного дна вимірювання очного тиску відновлення прохідності носослізного каналу лікування кератитів, кон’юнктивітів, глаукоми, катаракти блефаропластика дослідження та лікування синдрому «сухого ока» ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:56.507Z",
+          "updated_at": "2018-11-19T11:08:56.507Z",
+          "user_id": null,
+          "post_order": 3,
+          "taxonomy_id": 21,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 63,
+              "key": "slug",
+              "value": "ophthalmology",
+              "objectid": 10,
+              "object_class": "Post"
+            },
+            {
+              "id": 64,
+              "key": "summary",
+              "value": "",
+              "objectid": 10,
+              "object_class": "Post"
+            },
+            {
+              "id": 65,
+              "key": "thumb",
+              "value": "/media/1/oftalmology.jpg",
+              "objectid": 10,
+              "object_class": "Post"
+            },
+            {
+              "id": 66,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 10,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 11,
+          "title": "ТЕРАПІЯ",
+          "slug": "therapy",
+          "content": "<ul>\r\n<li>огляд і консультація</li>\r\n<li>оформлення ветеринарного паспорту</li>\r\n<li>вакцинація</li>\r\n<li>ін&rsquo;єкції</li>\r\n<li>введення внутрішньовенних інфузій</li>\r\n<li>чистка вушних раковин</li>\r\n<li>санація параанальних залоз</li>\r\n<li>підстригання кігтів</li>\r\n</ul>",
+          "content_filtered": " огляд і консультація оформлення ветеринарного паспорту вакцинація ін’єкції введення внутрішньовенних інфузій чистка вушних раковин санація параанальних залоз підстригання кігтів ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:57.301Z",
+          "updated_at": "2018-11-19T11:08:57.301Z",
+          "user_id": null,
+          "post_order": 4,
+          "taxonomy_id": 21,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 67,
+              "key": "slug",
+              "value": "therapy",
+              "objectid": 11,
+              "object_class": "Post"
+            },
+            {
+              "id": 68,
+              "key": "summary",
+              "value": "",
+              "objectid": 11,
+              "object_class": "Post"
+            },
+            {
+              "id": 69,
+              "key": "thumb",
+              "value": "/media/1/therapy.jpg",
+              "objectid": 11,
+              "object_class": "Post"
+            },
+            {
+              "id": 70,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 11,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 12,
+          "title": "ХІРУРГІЧНІ ПРОЦЕДУРИ",
+          "slug": "hirurgichni-protseduri",
+          "content": "<ul>\r\n<li>кастрація та стерилізація</li>\r\n<li>видалення новоутворів</li>\r\n<li>кесарів розтин</li>\r\n<li>оперативні втручання в ділянці голови та шиї</li>\r\n<li>оперативні втручання на органах черевної порожнини і малого тазу</li>\r\n<li>герніотомія</li>\r\n<li>хірургічна обробка ран</li>\r\n</ul>",
+          "content_filtered": " кастрація та стерилізація видалення новоутворів кесарів розтин оперативні втручання в ділянці голови та шиї оперативні втручання на органах черевної порожнини і малого тазу герніотомія хірургічна обробка ран ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:58.283Z",
+          "updated_at": "2018-11-19T11:08:58.283Z",
+          "user_id": null,
+          "post_order": 5,
+          "taxonomy_id": 21,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 71,
+              "key": "slug",
+              "value": "hirurgichni-protseduri",
+              "objectid": 12,
+              "object_class": "Post"
+            },
+            {
+              "id": 72,
+              "key": "summary",
+              "value": "",
+              "objectid": 12,
+              "object_class": "Post"
+            },
+            {
+              "id": 73,
+              "key": "thumb",
+              "value": "/media/1/surgery.jpg",
+              "objectid": 12,
+              "object_class": "Post"
+            },
+            {
+              "id": 74,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 12,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        },
+        {
+          "id": 13,
+          "title": "ЛАБОРАТОРНА ДІАГНОСТИКА ",
+          "slug": "lab",
+          "content": "<ul>\r\n<li>гематологічний аналіз крові</li>\r\n<li>біохімічний аналіз крові</li>\r\n<li>аналіз сечі</li>\r\n<li>експрес-діагностика</li>\r\n<li>аналіз крові на дирофіляріоз / бабезіоз / гемобартонельоз</li>\r\n<li>бактеріологічне дослідження з антибіотикограмою</li>\r\n<li>гістологічне дослідження новоутворень</li>\r\n</ul>",
+          "content_filtered": " гематологічний аналіз крові біохімічний аналіз крові аналіз сечі експрес-діагностика аналіз крові на дирофіляріоз / бабезіоз / гемобартонельоз бактеріологічне дослідження з антибіотикограмою гістологічне дослідження новоутворень ",
+          "status": "published",
+          "published_at": null,
+          "post_parent": null,
+          "visibility": "public",
+          "visibility_value": null,
+          "post_class": "Post",
+          "created_at": "2018-11-19T11:08:58.686Z",
+          "updated_at": "2018-11-19T11:08:58.686Z",
+          "user_id": null,
+          "post_order": 6,
+          "taxonomy_id": 21,
+          "is_feature": false,
+          "custom_field_groups": [
+
+          ],
+          "metas": [
+            {
+              "id": 75,
+              "key": "slug",
+              "value": "lab",
+              "objectid": 13,
+              "object_class": "Post"
+            },
+            {
+              "id": 76,
+              "key": "summary",
+              "value": "",
+              "objectid": 13,
+              "object_class": "Post"
+            },
+            {
+              "id": 77,
+              "key": "thumb",
+              "value": "/media/1/lab.jpg",
+              "objectid": 13,
+              "object_class": "Post"
+            },
+            {
+              "id": 78,
+              "key": "_default",
+              "value": "{\"seo_title\":\"\",\"keywords\":\"\",\"seo_description\":\"\",\"seo_author\":\"\",\"seo_image\":\"\"}",
+              "objectid": 13,
+              "object_class": "Post"
+            }
+          ],
+          "field_values": [
+
+          ],
+          "categories": [
+
+          ],
+          "post_tags": [
+
+          ]
+        }
+      ],
+      "custom_field_groups": [
+
+      ],
+      "field_values": [
+
+      ]
+    }
+  ],
+  "nav_menus": [
+    {
+      "id": 23,
+      "taxonomy": "nav_menu",
+      "description": null,
+      "parent_id": 1,
+      "count": 7,
+      "name": "Main Menu",
+      "slug": "main_menu",
+      "term_group": null,
+      "term_order": null,
+      "status": null,
+      "created_at": "2018-11-19T11:08:59.756Z",
+      "updated_at": "2018-11-19T11:08:59.756Z",
+      "user_id": null,
+      "children": [
+        {
+          "id": 24,
+          "taxonomy": "nav_menu_item",
+          "description": "/",
+          "parent_id": 23,
+          "count": null,
+          "name": "Головна",
+          "slug": "external",
+          "term_group": 1,
+          "term_order": 1,
+          "status": "",
+          "created_at": "2018-11-19T11:08:59.822Z",
+          "updated_at": "2018-11-19T11:08:59.822Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "metas": [
+
+          ],
+          "field_values": [
+
+          ]
+        },
+        {
+          "id": 25,
+          "taxonomy": "nav_menu_item",
+          "description": "/services",
+          "parent_id": 23,
+          "count": null,
+          "name": "Послуги",
+          "slug": "external",
+          "term_group": 1,
+          "term_order": 2,
+          "status": "",
+          "created_at": "2018-11-19T11:08:59.977Z",
+          "updated_at": "2018-11-19T11:08:59.977Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "metas": [
+
+          ],
+          "field_values": [
+
+          ]
+        },
+        {
+          "id": 26,
+          "taxonomy": "nav_menu_item",
+          "description": "/inquiry",
+          "parent_id": 23,
+          "count": null,
+          "name": "Запис",
+          "slug": "external",
+          "term_group": 1,
+          "term_order": 3,
+          "status": "",
+          "created_at": "2018-11-19T11:09:00.063Z",
+          "updated_at": "2018-11-19T11:09:00.063Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "metas": [
+
+          ],
+          "field_values": [
+
+          ]
+        },
+        {
+          "id": 27,
+          "taxonomy": "nav_menu_item",
+          "description": "3",
+          "parent_id": 23,
+          "count": null,
+          "name": "auto",
+          "slug": "post",
+          "term_group": 1,
+          "term_order": 4,
+          "status": null,
+          "created_at": "2018-11-19T11:09:00.161Z",
+          "updated_at": "2018-11-19T11:09:00.232Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "metas": [
+
+          ],
+          "field_values": [
+
+          ]
+        },
+        {
+          "id": 28,
+          "taxonomy": "nav_menu_item",
+          "description": "4",
+          "parent_id": 23,
+          "count": null,
+          "name": "auto",
+          "slug": "post",
+          "term_group": 1,
+          "term_order": 5,
+          "status": null,
+          "created_at": "2018-11-19T11:09:00.280Z",
+          "updated_at": "2018-11-19T11:09:00.370Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "metas": [
+
+          ],
+          "field_values": [
+
+          ]
+        },
+        {
+          "id": 29,
+          "taxonomy": "nav_menu_item",
+          "description": "19",
+          "parent_id": 23,
+          "count": null,
+          "name": "auto",
+          "slug": "post_type",
+          "term_group": 1,
+          "term_order": 6,
+          "status": null,
+          "created_at": "2018-11-19T11:09:00.409Z",
+          "updated_at": "2018-11-19T11:09:00.478Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "metas": [
+
+          ],
+          "field_values": [
+
+          ]
+        },
+        {
+          "id": 30,
+          "taxonomy": "nav_menu_item",
+          "description": "5",
+          "parent_id": 23,
+          "count": null,
+          "name": "auto",
+          "slug": "post",
+          "term_group": 1,
+          "term_order": 7,
+          "status": null,
+          "created_at": "2018-11-19T11:09:00.522Z",
+          "updated_at": "2018-11-19T11:09:00.593Z",
+          "user_id": null,
+          "childrens": [
+
+          ],
+          "metas": [
+
+          ],
+          "field_values": [
+
+          ]
+        }
+      ],
+      "metas": [
+
+      ],
+      "get_field_groups": [
+
+      ],
+      "field_values": [
+
+      ]
+    }
+  ],
+  "themes": {
+    "id": 17,
+    "taxonomy": "theme",
+    "description": null,
+    "parent_id": 1,
+    "count": null,
+    "name": "СоноВет",
+    "slug": "sonovet",
+    "term_group": null,
+    "term_order": null,
+    "status": null,
+    "created_at": "2018-11-16T23:48:28.608Z",
+    "updated_at": "2018-11-22T12:31:22.367Z",
+    "user_id": null,
+    "metas": [
+
+    ],
+    "get_field_groups": [
+      {
+        "id": 1,
+        "object_class": "Theme",
+        "name": "New theme settings",
+        "slug": "theme_new_fields",
+        "objectid": 17,
+        "parent_id": 1,
+        "field_order": null,
+        "count": 0,
+        "is_repeat": false,
+        "description": "new theme",
+        "status": null,
+        "metas": [
+
+        ],
+        "fields": [
+          {
+            "id": 2,
+            "object_class": "_fields",
+            "name": "Background color",
+            "slug": "theme_custom_bg_color",
+            "objectid": null,
+            "parent_id": 1,
+            "field_order": null,
+            "count": 0,
+            "is_repeat": false,
+            "description": null,
+            "status": null,
+            "metas": [
+              {
+                "id": 79,
+                "key": "_default",
+                "value": "{\"field_key\":\"colorpicker\",\"required\":true}",
+                "objectid": 2,
+                "object_class": "CustomField"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "object_class": "_fields",
+            "name": "Links color",
+            "slug": "theme_custom_links_color",
+            "objectid": null,
+            "parent_id": 1,
+            "field_order": null,
+            "count": 0,
+            "is_repeat": false,
+            "description": null,
+            "status": null,
+            "metas": [
+              {
+                "id": 80,
+                "key": "_default",
+                "value": "{\"field_key\":\"colorpicker\",\"required\":true}",
+                "objectid": 3,
+                "object_class": "CustomField"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "object_class": "_fields",
+            "name": "Footer text",
+            "slug": "theme_custom_footer_text",
+            "objectid": null,
+            "parent_id": 1,
+            "field_order": null,
+            "count": 0,
+            "is_repeat": false,
+            "description": null,
+            "status": null,
+            "metas": [
+              {
+                "id": 81,
+                "key": "_default",
+                "value": "{\"field_key\":\"editor\",\"translate\":true}",
+                "objectid": 4,
+                "object_class": "CustomField"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "object_class": "Theme",
+        "name": "Services",
+        "slug": "_group-services",
+        "objectid": 17,
+        "parent_id": 1,
+        "field_order": null,
+        "count": 0,
+        "is_repeat": false,
+        "description": "",
+        "status": null,
+        "metas": [
+          {
+            "id": 156,
+            "key": "_default",
+            "value": "{\"caption\":\"Themes СоноВет\"}",
+            "objectid": 30,
+            "object_class": "CustomFieldGroup"
+          }
+        ],
+        "fields": [
+          {
+            "id": 31,
+            "object_class": "_fields",
+            "name": "services_list",
+            "slug": "services_list",
+            "objectid": null,
+            "parent_id": 30,
+            "field_order": 0,
+            "count": 0,
+            "is_repeat": false,
+            "description": "",
+            "status": null,
+            "metas": [
+              {
+                "id": 155,
+                "key": "_default",
+                "value": "{\"field_key\":\"card_editor\",\"label_eval\":\"\",\"panel_hidden\":\"\",\"multiple\":\"1\",\"required\":\"0\",\"translate\":\"0\"}",
+                "objectid": 31,
+                "object_class": "CustomField"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "field_values": [
+      {
+        "id": 335,
+        "objectid": 17,
+        "custom_field_id": 2,
+        "term_order": 0,
+        "object_class": "Theme",
+        "value": "#705959",
+        "custom_field_slug": "theme_custom_bg_color",
+        "group_number": 0
+      },
+      {
+        "id": 336,
+        "objectid": 17,
+        "custom_field_id": 3,
+        "term_order": 0,
+        "object_class": "Theme",
+        "value": "#cc8787",
+        "custom_field_slug": "theme_custom_links_color",
+        "group_number": 0
+      },
+      {
+        "id": 337,
+        "objectid": 17,
+        "custom_field_id": 4,
+        "term_order": 0,
+        "object_class": "Theme",
+        "value": "",
+        "custom_field_slug": "theme_custom_footer_text",
+        "group_number": 0
+      },
+      {
+        "id": 338,
+        "objectid": 17,
+        "custom_field_id": 31,
+        "term_order": 0,
+        "object_class": "Theme",
+        "value": "{\"title\":\"УЗД\",\"descr\":\"\\u003cul\\u003e\\r\\n\\u003cli\\u003eехокардіографія (ЕХО-КГ серця)\\u003c/li\\u003e\\r\\n\\u003cli\\u003eвнутрішніх органів\\u003c/li\\u003e\\r\\n\\u003cli\\u003eвагітності\\u003c/li\\u003e\\r\\n\\u003cli\\u003eм\\u0026rsquo;яких тканин\\u003c/li\\u003e\\r\\n\\u003cli\\u003eмолочної залози\\u003c/li\\u003e\\r\\n\\u003cli\\u003eновоутворень\\u003c/li\\u003e\\r\\n\\u003cli\\u003eсуглобів\\u003c/li\\u003e\\r\\n\\u003cli\\u003eока та перибульбарного простору\\u003c/li\\u003e\\r\\n\\u003cli\\u003eбіопсія під контролем УЗ\\u003c/li\\u003e\\r\\n\\u003c/ul\\u003e\"}",
+        "custom_field_slug": "services_list",
+        "group_number": 0
+      },
+      {
+        "id": 339,
+        "objectid": 17,
+        "custom_field_id": 31,
+        "term_order": 1,
+        "object_class": "Theme",
+        "value": "{\"title\":\"СТОМАТОЛОГІЯ\",\"descr\":\"\\u003cul\\u003e\\r\\n\\u003cli\\u003eлікування зубів у собак та котів\\u003c/li\\u003e\\r\\n\\u003cli\\u003eультразвукове зняття зубних відкладень з поліруванням емалі\\u003c/li\\u003e\\r\\n\\u003cli\\u003eвидалення тимчасових та постійних зубів\\u003c/li\\u003e\\r\\n\\u003cli\\u003eкорекція прикусу\\u003c/li\\u003e\\r\\n\\u003cli\\u003eпломбування зубів та естетична реставрація\\u003c/li\\u003e\\r\\n\\u003cli\\u003eлікування кореневих каналів\\u003c/li\\u003e\\r\\n\\u003cli\\u003eскладання індивідуальної стоматологічної карти\\u003c/li\\u003e\\r\\n\\u003c/ul\\u003e\"}",
+        "custom_field_slug": "services_list",
+        "group_number": 0
+      },
+      {
+        "id": 340,
+        "objectid": 17,
+        "custom_field_id": 31,
+        "term_order": 2,
+        "object_class": "Theme",
+        "value": "{\"title\":\"ОФТАЛЬМОЛОГІЯ\",\"descr\":\"\\u003cul\\u003e\\r\\n\\u003cli\\u003eдіагностика вад зору\\u003c/li\\u003e\\r\\n\\u003cli\\u003eдослідження очного дна\\u003c/li\\u003e\\r\\n\\u003cli\\u003eвимірювання очного тиску\\u003c/li\\u003e\\r\\n\\u003cli\\u003eвідновлення прохідності носослізного каналу\\u003c/li\\u003e\\r\\n\\u003cli\\u003eлікування кератитів, кон\\u0026rsquo;юнктивітів, глаукоми, катаракти\\u003c/li\\u003e\\r\\n\\u003cli\\u003eблефаропластика\\u003c/li\\u003e\\r\\n\\u003cli\\u003eдослідження та лікування синдрому \\u0026laquo;сухого ока\\u0026raquo;\\u003c/li\\u003e\\r\\n\\u003c/ul\\u003e\"}",
+        "custom_field_slug": "services_list",
+        "group_number": 0
+      }
+    ]
+  }
+}

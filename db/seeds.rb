@@ -12,5 +12,5 @@ if Rails.env.development?
 end
 Category.create!(name: 'first', id: 1) if Rails.env.development?
 Category.create!(name: 'second', id: 2) if Rails.env.development?
-Article.create!(title: 'title', body: 'body for atrticle first', autor_id: 1, category_id: 1, published: false) if Rails.env.development?
+Article.create!(title: 'title', body: 'body for atrticle first', autor_id: 1, category_id: 1, status: 1) if Rails.env.development?
 User.create!(name: "user", email: "user@mail.ua", id: 1, password: 'user_example', password_confirmation:'user_example')if Rails.env.development?

@@ -1,0 +1,55 @@
+@import "bootstrap";
+@import "gritter";
+@import "articles";
+@import "font-awesome";
+
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  background-color: transparent;
+}
+
+.card {
+  float: left;
+  width: 45%;
+  margin-bottom: 2rem;
+  border: 0.1rem solid black;
+  margin-left: 2rem;
+
+}
+
+.card > img {
+  margin-bottom: 0.1rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('article_for_user.jpg') no-repeat;
+  background-size: cover;
+}
+.gritter .gritter-title{
+font-size:1.2rem;
+}
+.gritter .gritter-item {
+  font-size:1rem;
+}
+.like{
+  text-align:right;
+  font-size: 20px;
+}
+.favorite{
+  margin-bottom: 2rem;
+}

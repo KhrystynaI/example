@@ -10,18 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require turbolinks
-//= require_tree .
 //= require Chart.bundle
 //= require highcharts
 //= require chartkick
-//= require jquery
-//= require jquery.turbolinks
+//= require jquery3
 //= require jquery_ujs
-//= require foundation
-
-$(function(){ $(document).foundation(); });
-$(document).on('turbolinks:load', function() {
-  $(function(){ $(document).foundation(); });
-});
+//= require popper
+//= require bootstrap
+//= require gritter
+//= require typed
+//= require bootstrap-datepicker
+//= require activestorage
+//= require direct_uploads
+//= require turbolinks
+//= require_tree .

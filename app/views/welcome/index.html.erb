@@ -1,40 +1,120 @@
-<div class="grid-container">
-<div><h1>newspaper</h1></div>
+<div class="app-card-container">
+
+  <h1>newspaper</h1>
+
+  <div class="typed_wrap">
+			<p>If you want to read really interesting article, <span class="element"></span></p>
+		</div>
+
+
+
+  <%if current_user%>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <p >tired? good buy</p>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary"%>
+      </div>
+    </div>
+  </div>
+  <%elsif current_autor%>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <p >tired? goodbye</p>
+        <%= link_to "Log out", destroy_autor_session_path, method: :delete, class: "btn btn-primary"%>
+      </div>
+    </div>
+  </div>
+  <%else%>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <p >if you want to read articles, push this</p>
+        <%= link_to "Register", new_user_session_path, class: "btn btn-primary"%>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <p >if you want to write articles, push this</p>
+        <%= link_to "Register", new_autor_session_path, class: "btn btn-primary"%>
+      </div>
+    </div>
+  </div>
+  <%end%>
+  <div class="space"></div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <h5 class="card-title">weather in the capital</h5>
+        <p id='weather' ></p>
+        <p id='humidity' ></p>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="card">
+        <h5 class="card-title">interisting to read</h5>
+        <%@article.each do |art|%>
+        <p><%=art.title%></p>
+        <%end%>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="grid-container">
-<div class="grid-x grid-padding-x">
-  <div class="cell small-6 auto">
-<%= link_to 'Articles', articles_url %>
 </div>
-<div class="cell small-6 auto">
-<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-</div>
-</div>
-</div>
-<div class="grid-container">
-  <div class="grid-x grid-padding-x">
-  <div class = "cell small-6 auto" id = 'weather'>
-</div>
-  <div class = "cell small-6 auto" id = 'humidity'>
-</div>
-</div>
+
 <script>
 
 async function getWeather(id){
-fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`)
-.then(result => {
-return result.json();
-})
-.then(data => {
-  const today = data.consolidated_weather[0];
-  console.log(data);
-  document.getElementById("weather").innerHTML =`temperature in ${data.title} stay between ${parseInt(today.min_temp)} °C and ${parseInt(today.max_temp)} °C`
-  document.getElementById("humidity").innerHTML = `humidity ${today.humidity} % and it looks like "${today.weather_state_name}"`
+  fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}/`)
+  .then(result => {
+    return result.json();
+  })
+  .then(data => {
+    const today = data.consolidated_weather[0];
+    console.log(data);
+    document.getElementById("weather").innerHTML =`temperature in ${data.title} stay between ${parseInt(today.min_temp)} °C and ${parseInt(today.max_temp)} °C`
+    document.getElementById("humidity").innerHTML = `humidity ${today.humidity} % and it looks like "${today.weather_state_name}"`
 
-})
-.catch(error => console.log(error));
+  })
+  .catch(error => console.log(error));
 }
 getWeather(924938);
 </script>
-</div>
-</div>
+<script>
+
+var typed = new Typed(".element", {
+		strings: [ "you are on the right page, dear author", "you are on the right page, dear user", "you are on the right page, dear friend"],
+		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+		stringsElement: null,
+		// typing speed
+		typeSpeed: 30,
+		// time before typing starts
+		startDelay: 1200,
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// false = infinite
+		loopCount: 5,
+		// show cursor
+		showCursor: false,
+		// character for cursor
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+	});
+
+</script>

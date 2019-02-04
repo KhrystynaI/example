@@ -1,0 +1,9 @@
+<%if @article.comments.any?%>
+<div class="row">
+  <ul class="list-group">
+  <% @article.comments.each do |comment| %>
+    <li class="list-group-item"><%= comment.body %></li>
+    <%end%>
+  </ul>
+</div>
+<%end%>

@@ -1,3 +1,19 @@
-// Place all the styles related to the Autors controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+@import "gritter";
+
+.chart{
+  padding-top: 3rem;
+}
+.all_charts{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.table{
+  width: 100%;
+}
+.form-inline >*{
+  margin: 5px 3px;
+}
+.button_chart{
+  padding-top: 20%;
+}

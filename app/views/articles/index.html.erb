@@ -1,20 +1,42 @@
-<h1>Listing Articles</h1>
-<%= link_to 'New article', new_article_path %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th colspan="3"></th>
-  </tr>
 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= link_to(article.title, article_path(article)) %></td>
-      <td><%= link_to 'Comment for user', article_path(article) %></td>
-      <td><%= link_to 'Change for autor', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy(only for autor)', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="album text-muted">
+  <div class="container">
+    <div class="row favorite">
+      <%if current_user.favorites.count > 0 %>
+      <div class="col-md-10"></div>
+      <div class="col-md-2">
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    You like its
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <% current_user.favorites.each do |favorite| %>
+    <%=link_to favorite.article.title, favorite.article, class:"dropdown-item" %>
+    <%end%>
+  </div>
+  </div>
+  </div>
+<%end%>
+</div>
+
+    <div class="row">
+      <% @article.each do |article| %>
+      <div class="card">
+        <%= image_tag(article.banner("268X180!"), class: "card-img-top") %>
+        <div class="card-body">
+          <h5 class="card-title"><%= article.title %></h5>
+        <p class="card-text"><%= truncate(markdown(article.body), length: 200, escape: false, omission: '...(continued)') %></p>
+        <%= link_to "Read", article_path(article), class: "btn btn-primary"%>
+      </div>
+    </div>
+    <% end %>
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><%= will_paginate @article, class:"page-link" %></li>
+  </ul>
+</nav>
+
+</div>
+</div>

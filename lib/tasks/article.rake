@@ -2,11 +2,10 @@ namespace :articles do
   desc 'Check status of published'
   task articlelist: :environment do
     Article.all.each do |article|
-      if article.created_at <= Time.now
-        article.published = true
-        article.update_attributes(updated_at: Time.now)
+      if article.published_at.present? && article.published_at <= Time.now
+        article.update_attributes(status:1)
       end
-      puts article.title if article.published == true
+      puts article.title if article.published?
     end
   end
 end

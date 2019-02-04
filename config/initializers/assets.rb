@@ -9,7 +9,11 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w[vendor/modernizr.js]
-
+Rails.application.config.assets.precompile += %w( chartkick.js )
+Rails.application.config.assets.precompile += %w( welcome.css )
+Rails.application.config.assets.precompile += %w( article_for_user.css )
+Rails.application.config.assets.precompile += %w( article_for_autor.css )
+Rails.application.config.assets.precompile += %w( autors.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

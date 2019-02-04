@@ -1,0 +1,83 @@
+<div class="container article_autor_show">
+  <div class="row">
+<div class="col-md-9">
+  <%if @article.present?%>
+<%@article.each do |article|%>
+<ul class="list-unstyled">
+<li class="media">
+  <%= image_tag(article.banner("200X150!"),class:"align-self-center mr-3")%>
+  <div class="media-body">
+    <h5 class="mt-0"><%= link_to article.title, edit_article_path(article.id) %></h5>
+    <p>Published <%= distance_of_time_in_words(article.created_at, Time.now) %> ago</p>
+
+    <div class= "article-main"><%= truncate(markdown(article.body), length: 600, escape: false) %>
+    </div>
+    <%= link_to 'Destroy', article_path(article),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
+
+</div>
+</li>
+<hr>
+</ul>
+<%end%>
+<%else%>
+<div class="jumbotron">
+    <p>If you want to write article, <span class="element_autor"></span></p>
+  </div>
+<%end%>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><%= will_paginate @article, class:"page-link" %></li>
+  </ul>
+</nav>
+</div>
+
+
+
+<div class="col-md-3">
+  <%= link_to 'New article', new_article_path, class: 'btn btn-primary btn-block circle' %>
+  <%= link_to "Statistic", autors_for_autor_path, class: 'btn btn-primary btn-block circle'%>
+  <%=render "chat_box"%>
+</div>
+</div>
+</div>
+
+<script>
+
+var typed = new Typed(".element_autor", {
+		strings: [ "you are on the right page, dear author", "just click on 'new article'"],
+		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+		stringsElement: null,
+		// typing speed
+		typeSpeed: 30,
+		// time before typing starts
+		startDelay: 1200,
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// false = infinite
+		loopCount: 5,
+		// show cursor
+		showCursor: false,
+		// character for cursor
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+	});
+
+</script>

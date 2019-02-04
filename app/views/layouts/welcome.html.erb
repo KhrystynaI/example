@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Newspaper</title>
+
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
+    <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <%= video_tag(
+              'Travaho.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'Travaho.jpg'
+            )
+            %>
+
+  <%= yield %>
+  <%= alerts %>
+</div>
+  </div>
+</div>
+  </body>
+</html>

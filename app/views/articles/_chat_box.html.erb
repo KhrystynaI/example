@@ -1,0 +1,27 @@
+<div class="well" id="chatbox">
+  <%if @messages.present?%>
+  <%@messages.each do |message|%>
+  <%= render 'messages/message', message: message%>
+  <%end%>
+  <%end%>
+</div>
+<%=form_with model: @message do |f|%>
+<div class="input-group md-3">
+  <%=f.text_field :body, class: "form-control"%>
+  <div class="input-group-append">
+    <%=f.submit "send", class: "btn btn-primary"%>
+  </div>
+</div>
+<%end%>
+
+<script>
+
+$(document).ready(function(){
+  var messages = $("#chatbox");
+  function init(){
+    messages.scrollTop(messages[0].scrollHeight);
+  }
+  window.setTimeout(init, 5);
+});
+
+</script>

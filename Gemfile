@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.5'
+#gem 'rails', '~> 5.1.5'
+gem 'rails', '~> 5.2.0.beta1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -21,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'jquery-turbolinks'
+
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
@@ -41,7 +42,7 @@ gem 'groupdate'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'chartkick'
-gem 'foundation-rails', '~> 6.4.1'
+gem 'bootstrap', '~> 4.0.0'
 gem 'rubocop', require: false
 gem 'rubocop-rspec', require: false
 gem 'whenever', require: false
@@ -78,3 +79,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'gritter'
+gem "mini_magick"
+gem 'bootstrap-datepicker-rails'
+gem 'redis', '~> 3.2'
+gem 'redcarpet'
+gem 'coderay'
+gem 'will_paginate'
+gem 'jquery-rails'
+gem "font-awesome-rails"

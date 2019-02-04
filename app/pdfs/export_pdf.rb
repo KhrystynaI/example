@@ -29,7 +29,7 @@ class ExportPdf
 
   def art_for_autor(autor)
     [["Title", "status","published"]] +
-    autor.articles.map { |article| [article.title.to_s, article.published.to_s, article.published_at.to_s]}
+    autor.articles.map { |article| [article.title.to_s, article.status.to_s, article.created_at.to_s]}
   end
 
   def charts_for_autor_comments(autor)

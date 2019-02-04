@@ -1,0 +1,10 @@
+<div class="row ">
+  <div class="col-md-12">
+
+<h2 class="text-center"><%= @article.title %></h2>
+
+<p><%= truncate(markdown(@article.body), length: 600, escape: false) %></p>
+<h5 class="text-right"><%= @article.autor.name || "anonimus"%></h5>
+<p class="text-right">Published <%= distance_of_time_in_words((@article.published_at || @article.created_at), Time.now) %> ago</p>
+</div>
+</div>
