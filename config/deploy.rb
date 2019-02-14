@@ -27,9 +27,9 @@ set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
 #set :execution_mode, :system
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
-set :puma_state, "#{:shared_path}/tmp/pids/puma.state"
-set :puma_pid, "#{:shared_path}/tmp/pids/puma.pid"
-set :puma_bind, "unix://#{:shared_path}/tmp/sockets/puma.sock" # accept array for multi-bind
+set :puma_state, "#{:shared_path}/pids/puma.state"
+set :puma_pid, "#{:shared_path}/pids/puma.pid"
+set :puma_bind, "unix://#{:shared_path}/sockets/puma.sock" # accept array for multi-bind
 set :puma_conf, "#{:shared_path}/config/puma.rb"
 set :puma_access_log, "#{:shared_path}/log/puma_error.log"
 set :puma_error_log, "#{:shared_path}/log/puma_access.log"
@@ -44,7 +44,7 @@ set :puma_preload_app, true
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
 # run `mina -d` to see all folders and files already included in `shared_dirs` and `shared_files`
 
-set :shared_dirs, fetch(:shared_dirs, []).push('log', 'tmp/pids', 'tmp/sockets', 'public/uploads')
+set :shared_dirs, fetch(:shared_dirs, []).push('log', 'pids', 'sockets', 'public/uploads')
 set :shared_files, fetch(:shared_files, []).push(
 'config/secrets.yml',
 'db/production.sqlite3'
@@ -55,9 +55,9 @@ end
 
 task :setup do
   command %[touch "#{fetch(:shared_path)}/config/database.yml"]
-  command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
+  #command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
   command %[touch "#{fetch(:shared_path)}/config/puma.rb"]
-  comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
+  comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', and puma.rb."
 end
 
 task :deploy do
