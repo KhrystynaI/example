@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     member do
       delete :delete_upload
   end
+  collection do
+    put :sort
+  end
     resources :comments
   end
 

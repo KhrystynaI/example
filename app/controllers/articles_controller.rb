@@ -1,11 +1,11 @@
 class ArticlesController < ApplicationController
   layout :layout
-  before_action :authenticate_autor!, except: %i[index show]
-  before_action :authenticate_user!, only: [:show, :index]
+  before_action :authenticate_autor!, except: %i[index show sort]
+  before_action :authenticate_user!, only: [:show, :index, :sort]
 
   def index
     #flash.now[:alert] = "Hello, #{current_user.user_name}"
-    @article = Article.published.order("created_at DESC").paginate(page: params[:page])
+    @article = Article.published.order(:position).paginate(page: params[:page])
   end
 
 def index_for_autor
@@ -70,10 +70,17 @@ end
   redirect_back(fallback_location: edit_article_path)
   end
 
+  def sort
+    params.require(:article).each_with_index do |id, index|
+       Article.where(id: id).update_all(position: index + 1)
+   end
+  head :ok
+end
+
   private
 
   def article_params
-    params.require(:article).permit(:title, :body, :published_at, :status, :category_id, images: [])
+    params.require(:article).permit(:title, :body, :published_at, :status, :position, :category_id, images: [])
   end
 
   def layout
