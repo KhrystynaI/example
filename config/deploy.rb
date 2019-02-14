@@ -23,7 +23,7 @@ set :branch, 'master'
 # Optional settings:
 set :user, 'ubuntu'           # Username in the server to SSH to.
 #set :port, '30000'           # SSH port number.
-#set :forward_agent, true     # SSH forward_agent.
+set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
 #set :execution_mode, :system
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
