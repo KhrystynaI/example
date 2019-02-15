@@ -46,7 +46,7 @@ set :puma_preload_app, true
 
 set :shared_dirs, fetch(:shared_dirs, []).push('log', 'pids', 'sockets', 'public/uploads')
 set :shared_files, fetch(:shared_files, []).push(
-'config/secrets.yml',
+'config/master.key',
 'db/production.sqlite3'
 )
 task :remote_environment do
@@ -55,7 +55,7 @@ end
 
 task :setup do
   command %[touch "#{fetch(:shared_path)}/config/database.yml"]
-  #command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
+  command %[touch "#{fetch(:shared_path)}/config/master.key"]
   command %[touch "#{fetch(:shared_path)}/config/puma.rb"]
   comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', and puma.rb."
 end
