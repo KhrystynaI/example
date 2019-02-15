@@ -42,7 +42,7 @@ set :puma_init_active_record, true
 set :puma_preload_app, true
 set :default_env, {
   "RAILS_ENV" => "production",
-  "RAILS_MASTER_KEY" => $ cat config/master.key
+  "RAILS_MASTER_KEY" => 'cat config/master.key'
 }
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
