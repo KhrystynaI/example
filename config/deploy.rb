@@ -40,6 +40,10 @@ set :puma_workers, 1
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, true
+set :default_env, {
+  "RAILS_ENV" => "production",
+  "RAILS_MASTER_KEY" => $ cat config/master.key
+}
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
 # run `mina -d` to see all folders and files already included in `shared_dirs` and `shared_files`
@@ -55,7 +59,7 @@ end
 
 task :setup do
   command %[touch "#{fetch(:shared_path)}/config/database.yml"]
-  command %[touch "#{fetch(:shared_path)}/config/master.key"]
+  #command %[touch "#{fetch(:shared_path)}/config/master.key"]
   command %[touch "#{fetch(:shared_path)}/config/puma.rb"]
   comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', and puma.rb."
 end
