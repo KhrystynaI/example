@@ -7,7 +7,7 @@ local_test:
   root: <%= Rails.root.join("tmp/storage") %>
 
 amazon:
-  servise: S3
+  service: S3
   access_key_id: <%= Rails.application.credentials[:production][:amazon][:access_key_id]%>
   secret_access_key: <%= Rails.application.credentials[:production][:amazon][:secret_access_key] %>
   region: us-east-1
