@@ -26,6 +26,7 @@ set :user, 'ubuntu'           # Username in the server to SSH to.
 set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
 #set :execution_mode, :system
+set :whenever_name, 'production'
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{:shared_path}/pids/puma.state"
 set :puma_pid, "#{:shared_path}/pids/puma.pid"
@@ -69,7 +70,6 @@ deploy do
   comment "Deploying #{fetch(:application_name)} to #{fetch(:domain)}:#{fetch(:deploy_to)}"
   invoke :'git:clone'
   invoke :'deploy:link_shared_paths'
-  #invoke :'rvm:load_env_vars'
   invoke :'bundle:install'
   invoke :'rails:db_migrate'
   command %{#{fetch(:rails)} db:seed}
