@@ -1,6 +1,5 @@
-set :output, './log/cron.log'
-set :bundle_command, "/home/ubuntu/.rbenv/shims/bundle exec"
 env :PATH, ENV['PATH']
+set :output, './log/cron.log'
 every :day do
   rake 'articles:articlelist'
 end
