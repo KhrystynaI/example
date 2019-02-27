@@ -1,6 +1,6 @@
 namespace :articles do
   desc 'Check status of published'
-  task articlelist: :environment do
+  task articlelist: :remote_environment do
     Article.all.each do |article|
       if article.published_at.present? && article.published_at <= Time.now
         article.update_attributes(status:1)
