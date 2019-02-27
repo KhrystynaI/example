@@ -1,5 +1,5 @@
 set :output, './log/cron.log'
-set :bundle_command, "/usr/local/bin/bundle exec"
+set :bundle_command, "/home/ubuntu/.rbenv/shims/bundle exec"
 env :PATH, ENV['PATH']
 every :day do
   rake 'articles:articlelist'
