@@ -61,7 +61,7 @@ group :development, :test do
   gem 'rspec_junit_formatter'
   gem 'factory_bot'
   gem 'mina'
-  gem 'mina-whenever',, require: false
+  gem 'mina-whenever', require: false
   gem 'mina-puma', require: false
 end
 
