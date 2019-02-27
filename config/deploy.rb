@@ -27,6 +27,7 @@ set :forward_agent, true     # SSH forward_agent.
 #set :term, :system
 #set :execution_mode, :system
 set :whenever_name, 'production'
+set :whenever_command, "bundle exec whenever"
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{:shared_path}/pids/puma.state"
 set :puma_pid, "#{:shared_path}/pids/puma.pid"
