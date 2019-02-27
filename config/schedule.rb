@@ -1,6 +1,5 @@
 set :output, './log/cron.log'
-env :PATH, ENV['PATH']
-env :GEM_PATH, ENV['GEM_PATH']
+remote_environment :PATH, ENV['PATH']
 every :day do
   rake 'articles:articlelist'
 end
