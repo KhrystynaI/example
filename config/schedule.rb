@@ -1,5 +1,6 @@
 set :output, './log/cron.log'
-remote_environment :PATH, ENV['PATH']
+set :bundle_command, "/usr/local/bin/bundle exec"
+env :PATH, ENV['PATH']
 every :day do
   rake 'articles:articlelist'
 end
