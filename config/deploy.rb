@@ -80,6 +80,7 @@ deploy do
     #invoke :'whenever:update'
     invoke :'puma:stop'
     invoke :'puma:start'
+    invoke :'whenever:update'
   end
 end
 end
