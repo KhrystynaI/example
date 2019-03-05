@@ -41,7 +41,6 @@ set :puma_workers, 1
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, true
-set :linked_files, %w{config/master.key}
 set :default_env, {
   "RAILS_ENV" => "production",
   "RAILS_MASTER_KEY" => 'cat config/master.key'
