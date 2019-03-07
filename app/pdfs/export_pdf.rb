@@ -5,6 +5,11 @@ class ExportPdf
 
   def initialize(autor)
     super()
+    font_families.update(
+     "Verdana" => {
+      :bold => Rails.root.join('public/fonts/verdana','verdanab.ttf'),
+      :italic => Rails.root.join('public/fonts/verdana','verdanab.ttf'),
+      :normal  => Rails.root.join('public/fonts/verdana','verdanab.ttf') })
     @autor = autor
     @articles = @autor.articles.all
     content
@@ -13,7 +18,7 @@ class ExportPdf
   def content
     bounding_box [8,730], :width => 550, :height => 600 do
       table art_for_autor(@autor) do
-        row(0)#.font_style = :bold
+        row(0).font_style = :bold
         columns(1..3).align = :right
         self.row_colors = ['DDDDDD', 'FFFFFF']
         self.header = true
