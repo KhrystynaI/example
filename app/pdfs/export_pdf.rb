@@ -43,6 +43,6 @@ class ExportPdf
     series = []
     series << Prawn::Graph::Series.new(autor.articles.map{|art| art.category_id}, type: :bar)
     xaxis_labels = autor.articles.map{|art| art.title}
-    graph series, width: 500, height: 200, title: "Category of articles per day", at: [10,700], xaxis_labels: xaxis_labels
+    graph series, width: 500, height: 200, title: "Category of articles", at: [10,700], xaxis_labels: xaxis_labels
   end
 end
