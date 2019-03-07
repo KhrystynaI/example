@@ -7,7 +7,7 @@ After registering on the main page, readers will be able to see all published ar
 Authors
 
 When you visit a page for authors, the author sees a list of his own articles (if they exist, if the articles are not exist, the author sees a printed invitation to write an article). Also, the author sees two buttons "New article" and "Statistics". Under the buttons is implemented a small chat for authors. Chat messages appear without the need to update the page. Chat was written using Action Cable.  By clicking on the "New" button, the author go over the page for creating a new article. Here, the author can choose the category to which the article belongs, the time of publication (Datepicker for visual display calendar and Whenever to post an article on the day it was scheduled) or leave it in drafts. Also, the author can download the photo (Active Storage). By choosing one or several photos and clicking Submit, the author sees how each of the files is downloaded (direct upload). If the author doesn want to upload a photo, a gray screen saver will appear in photo's place. The author can also view the article by deleting or adding photos, changing the time of publication, or moving the article from drafts to "published".
-By clicking on the Statistics button, the author go over the page with statistics that is depicted by different charts (chartkick) and tables. Also, the author can download statistics (shrimp) in pdf format.
+By clicking on the Statistics button, the author go over the page with statistics that is depicted by different charts (chartkick) and tables. Also, the author can download statistics (prawn) in pdf format.
 
 Admin
 

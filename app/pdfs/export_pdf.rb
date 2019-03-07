@@ -28,8 +28,8 @@ class ExportPdf
   end
 
   def art_for_autor(autor)
-    [["Title", "status","published"]] +
-    autor.articles.map { |article| [article.title.to_s, article.status.to_s, article.created_at.to_s]}
+    [["Title", "status"]] +
+    autor.articles.map { |article| [article.title.to_s, article.status.to_s]}
   end
 
   def charts_for_autor_comments(autor)
@@ -42,7 +42,7 @@ class ExportPdf
   def charts_for_autor_category(autor)
     series = []
     series << Prawn::Graph::Series.new(autor.articles.map{|art| art.category_id}, type: :bar)
-    xaxis_labels = autor.articles.map{|art| art.created_at.to_s}
+    xaxis_labels = autor.articles.map{|art| art.title}
     graph series, width: 500, height: 200, title: "Category of articles per day", at: [10,700], xaxis_labels: xaxis_labels
   end
 end
