@@ -7,9 +7,9 @@ class ExportPdf
     super()
     font_families.update(
      "Verdana" => {
-      :bold => Rails.root.join('public/fonts/verdana','verdanab.ttf'),
-      :italic => Rails.root.join('public/fonts/verdana','verdanab.ttf'),
-      :normal  => Rails.root.join('public/fonts/verdana','verdanab.ttf') })
+      :bold => Rails.root.join('assets/fonts','verdanab.ttf'),
+      :italic => Rails.root.join('assets/fonts','verdanab.ttf'),
+      :normal  => Rails.root.join('assets/fonts','verdanab.ttf') })
     @autor = autor
     @articles = @autor.articles.all
     content
