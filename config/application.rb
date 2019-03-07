@@ -13,6 +13,7 @@ module Newspaper
     config.i18n.fallbacks = true
     config.time_zone = "Europe/Kiev"
     config.active_record.default_timezone = :utc
+    config.encoding = "utf-8"
     #config.enable_dependency_loading = true
     #config.autoload_paths << Rails.root.join('lib')
 

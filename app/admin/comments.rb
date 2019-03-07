@@ -9,5 +9,6 @@ ActiveAdmin.register Comment do
     column :article do |com|
       link_to(com.article.title, admin_article_path(com.article.id)).html_safe
     end
+    actions
   end
 end
