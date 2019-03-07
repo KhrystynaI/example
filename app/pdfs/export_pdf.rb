@@ -13,7 +13,7 @@ class ExportPdf
   def content
     bounding_box [8,730], :width => 550, :height => 600 do
       table art_for_autor(@autor) do
-        row(0).font_style = :bold
+        row(0)#.font_style = :bold
         columns(1..3).align = :right
         self.row_colors = ['DDDDDD', 'FFFFFF']
         self.header = true

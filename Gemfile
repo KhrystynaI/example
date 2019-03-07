@@ -34,7 +34,7 @@ gem "figaro"
 gem 'devise', '~> 4.3'
 # Build administrative panel with
 gem 'activeadmin', '~> 1.2'
-gem 'prawn', '~> 2.1.0'
+gem 'prawn', '~>2.2.2'
 gem 'prawn-table'
 gem 'highcharts-rails'
 gem 'prawn-graph', ' ~> 1.0'
