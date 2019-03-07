@@ -42,7 +42,7 @@ class ExportPdf
     series = []
     series << Prawn::Graph::Series.new(autor.articles.map{|art| art.comments.count}, type: :line, mark_average: true, mark_minimum: true)
     xaxis_labels = autor.articles.map{|art| art.title.to_s.byteslice(0..5)}
-    graph series, width: 500, height: 200, title: "Count of comments for article", at: [10,700], xaxis_labels: xaxis_labels
+    graph series, width: 500, height: 200, title: "Count of comments for article".force_encoding('UTF-8'), at: [10,700], xaxis_labels: xaxis_labels
   end
 
   def charts_for_autor_category(autor)
