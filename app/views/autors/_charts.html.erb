@@ -8,17 +8,12 @@
     <p>count of articles</p>
     <%= pie_chart Article.group(:autor_id).count, width: "300px", height: "400px", colors: ["#b00", "#666", "b007", "#670"]%>
   </div>
-    <div class="col-md-4">
-    <p>comments</p>
-    <%= bar_chart @autor.articles.map{|art| {name: art.title.to_s.byteslice(0..9), data: art.comments.group(:created_at).count}}, width: "500px", height: "400px", colors: ["#b00", "#666", "b007", "#670"]%>
-  </div>
-</div>
-<div class="row">
-
-  <div class="col-md-8">
+  <div class="col-md-4">
     <p>salary</p>
     <%= pie_chart Autor.group(:name).sum(:salary), width: "300px", height: "400px", colors: ["#b00", "#666", "b007", "#670"], library: {animation: {easing: 'easeOutQuad'}, elements: {arc: {borderWidth: 0}}} %>
 </div>
+</div>
+<div class="row">
 <div class="col-md-4">
   <div class="form-inline button_chart">
     <%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
