@@ -21,7 +21,7 @@ class Article < ApplicationRecord
 def for_carousel
   if self.images.attached?
     (self.images).map do |image|
-      image.variant(resize: "1110X500!").processed
+      image#.variant(resize: "1000X500!").processed
 end
 else ["http://placehold.it/1110X500"]
 end
