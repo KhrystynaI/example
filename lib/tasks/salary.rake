@@ -5,6 +5,7 @@ namespace :salary do
       salary = (autor.articles.map { |art| art.comments.count}.sum * 0.8) + (autor.articles.count * 10) + 10
       autor.update_attributes(salary: salary)
       puts salary
+      puts Time.now
     end
   end
 end

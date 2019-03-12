@@ -5,12 +5,12 @@ class ExportPdf
 
   def initialize(autor)
     super()
-    #font_families.update(
-     #{}"Verdana" => {
-      #:bold => Rails.root.join('app/assets/fonts','verdanab.ttf'),
-      #:italic => Rails.root.join('app/assets/fonts','verdanab.ttf'),
-      #:normal  => Rails.root.join('app/assets/fonts','verdanab.ttf')})
-    #font "Verdana", size: 10
+    font_families.update(
+     "Verdana" => {
+      :bold => Rails.root.join('app/assets/fonts','verdanab.ttf'),
+      :italic => Rails.root.join('app/assets/fonts','verdanab.ttf'),
+      :normal  => Rails.root.join('app/assets/fonts','verdanab.ttf')})
+    font "Verdana", size: 10
     @autor = autor
     @articles = @autor.articles.all
     content
@@ -19,10 +19,10 @@ class ExportPdf
   def content
     bounding_box [8,730], :width => 550, :height => 600 do
       table art_for_autor(@autor) do
-      #  row(0).font_style = :bold
-      #  columns(1..3).align = :right
-      #  self.row_colors = ['DDDDDD', 'FFFFFF']
-        #self.header = true
+        row(0).font_style = :bold
+        columns(1..3).align = :right
+        self.row_colors = ['DDDDDD', 'FFFFFF']
+        self.header = true
       end
     end
     bounding_box [10,350], :width => 900, :height => 600 do
@@ -34,15 +34,15 @@ class ExportPdf
   end
 
   def art_for_autor(autor)
-    [["Title", "status"]] +
-    autor.articles.map { |article| [article.title.to_s, article.status.to_s]}
+    [["Title", "status", "data"]] +
+    autor.articles.map { |article| [article.title.to_s, article.status.to_s, article.created_at.to_s]}
   end
 
   def charts_for_autor_comments(autor)
     series = []
     series << Prawn::Graph::Series.new(autor.articles.map{|art| art.comments.count}, type: :line, mark_average: true, mark_minimum: true)
     xaxis_labels = autor.articles.map{|art| art.title.to_s.byteslice(0..5)}
-    graph series, width: 500, height: 200, title: "Count of comments for article", at: [10,700], xaxis_labels: xaxis_labels
+    (graph series, width: 500, height: 200, title: "Count of comments for article", at: [10,700], xaxis_labels: xaxis_labels).force_encoding("ISO-8859-1").encode("utf-8", replace: nil)
   end
 
   def charts_for_autor_category(autor)

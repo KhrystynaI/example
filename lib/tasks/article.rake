@@ -7,6 +7,7 @@ namespace :articles do
         article.update_attributes(status:1)
       end
       puts article.title if article.published?
+      puts Time.now
     end
   end
 end
