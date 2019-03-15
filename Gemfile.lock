@@ -123,6 +123,10 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.3)
     erubi (1.8.0)
+    exception_handler (0.8.0.0)
+      bundler
+      rails (>= 4.2.0)
+      responders
     execjs (2.7.0)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -381,6 +385,7 @@ DEPENDENCIES
   coderay
   coffee-rails (~> 4.2)
   devise (~> 4.3)
+  exception_handler (~> 0.8.0.0)
   factory_bot
   figaro
   font-awesome-rails

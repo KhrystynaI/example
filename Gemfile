@@ -91,3 +91,4 @@ gem "font-awesome-rails"
 gem 'acts_as_list', '~> 0.7.2'
 gem 'jquery-ui-rails', '~> 6.0.0'
 gem 'aws-sdk-s3'
+gem 'exception_handler', '~> 0.8.0.0'
